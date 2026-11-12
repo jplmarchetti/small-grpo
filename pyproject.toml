@@ -1,0 +1,27 @@
+[project]
+name = "small-model-grpo"
+version = "0.1.0"
+description = "GRPO format-vs-correctness study on Qwen2.5-0.5B (GSM8K)"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+# Laptop-safe dependencies: graders, rewards, GRPO core maths, statistics, reports.
+dependencies = [
+    "numpy>=2.0",
+    "scipy>=1.13",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+# Installed only on the GPU PC (RTX 5070) via the pc-jp-wsl skill: `uv sync --extra train`.
+train = [
+    "torch>=2.7",
+    "transformers>=4.50",
+    "peft>=0.15",
+    "datasets>=3.0",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
