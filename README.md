@@ -2,7 +2,7 @@
 
 When GRPO is applied to a base language model on math problems, its benchmark score rises quickly. Part of that gain may only be the model learning to **write the answer where the grader looks for it**, not **answering more problems correctly**. This project measures how much is each.
 
-**Status (2026-11-12):** design frozen, implementation not started. There is no training code, environment or measured GPU number yet.
+**Status (2026-11-12):** checkpoint 1 done (project file, `configs/base.yaml`, frozen splits in `manifests/`: 500 validation / 1,000 train / 4 exemplars, 0 duplicate questions in GSM8K train). Nothing trained or measured on the GPU yet.
 
 ## The experiment in short
 

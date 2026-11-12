@@ -1,0 +1,37 @@
+# Every fixed setting of the experiment (docs/METHODOLOGY.md §2, §3, §7).
+# Identical for all four cells and all seeds. Do not edit without asking.
+
+model:
+  name: Qwen/Qwen2.5-0.5B
+  revision: 060db6499f32faf8b98477b0a26969ef7d8b9987   # pinned 2026-11-12
+
+data:
+  dataset: openai/gsm8k
+  config: main
+  revision: 740312add88f781978c0658806c59bc2815b9866   # pinned 2026-11-12
+  split_seed: 42
+  validation_size: 500
+  train_size: 1000
+  fewshot_size: 4
+
+lora:
+  rank: 16
+  alpha: 32
+  dropout: 0.0
+  target_modules: all-linear
+
+training:
+  problems_per_step: 2
+  group_size: 8
+  steps: 500
+  temperature: 0.8
+  top_p: 0.95
+  max_new_tokens: 512
+  weight_decay: 0.0
+  grad_clip_norm: 1.0
+  advantage_eps: 1.0e-4
+  micro_batch_size: 4
+  checkpoint_every: 50
+  seeds: [42, 43, 44]
+  # Chosen by the LR pilot (checkpoint 8) from {1e-5, 3e-5, 1e-4}; null until then.
+  learning_rate: null

@@ -1,0 +1,15 @@
+{
+  "dataset": {
+    "config": "main",
+    "repo": "openai/gsm8k",
+    "revision": "740312add88f781978c0658806c59bc2815b9866",
+    "sha256": {
+      "test": "ee7b8da9e381df27b9e3f7758a159ab2bdaa4dbaa910546cbbc47e0cb44e4f59",
+      "train": "ea82612ea9582142387730c793eb67d3b12849002bc0b7fa6f8efafa7351419d"
+    }
+  },
+  "model": {
+    "repo": "Qwen/Qwen2.5-0.5B",
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+  }
+}
