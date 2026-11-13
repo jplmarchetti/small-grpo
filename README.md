@@ -2,7 +2,7 @@
 
 When GRPO is applied to a base language model on math problems, its benchmark score rises quickly. Part of that gain may only be the model learning to **write the answer where the grader looks for it**, not **answering more problems correctly**. This project measures how much is each.
 
-**Status (2026-11-12):** checkpoints 1–2 done: frozen splits in `manifests/` (500 validation / 1,000 train / 4 exemplars), prompt (`prompts.py`) and graders (`graders.py`, 72 tests; tag `grader-v1` after review). Nothing trained or measured on the GPU yet.
+**Status (2026-11-13):** checkpoints 1–3 done: frozen splits in `manifests/` (500 validation / 1,000 train / 4 exemplars), prompt and graders (tag `grader-v1`), cell rewards (`rewards.py`) and the GRPO core (`grpo.py`, tested on a tiny random model on the GPU PC). Nothing trained on the real model yet.
 
 ## The experiment in short
 
