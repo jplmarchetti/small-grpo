@@ -55,6 +55,11 @@ class TrainingConfig:
 
 
 @dataclass(frozen=True)
+class EvaluationConfig:
+    batch_size: int  # fixed for every model, so all are evaluated with the same batches
+
+
+@dataclass(frozen=True)
 class AnalysisConfig:
     n_resamples: int
     analysis_seed: int
@@ -66,6 +71,7 @@ class ExperimentConfig:
     data: DataConfig
     lora: LoraConfig
     training: TrainingConfig
+    evaluation: EvaluationConfig
     analysis: AnalysisConfig
 
 
@@ -78,5 +84,6 @@ def load_config(path: Path = BASE_CONFIG_PATH) -> ExperimentConfig:
         data=DataConfig(**raw["data"]),
         lora=LoraConfig(**raw["lora"]),
         training=TrainingConfig(**training),
+        evaluation=EvaluationConfig(**raw["evaluation"]),
         analysis=AnalysisConfig(**raw["analysis"]),
     )
