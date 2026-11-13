@@ -55,11 +55,18 @@ class TrainingConfig:
 
 
 @dataclass(frozen=True)
+class AnalysisConfig:
+    n_resamples: int
+    analysis_seed: int
+
+
+@dataclass(frozen=True)
 class ExperimentConfig:
     model: ModelConfig
     data: DataConfig
     lora: LoraConfig
     training: TrainingConfig
+    analysis: AnalysisConfig
 
 
 def load_config(path: Path = BASE_CONFIG_PATH) -> ExperimentConfig:
@@ -71,4 +78,5 @@ def load_config(path: Path = BASE_CONFIG_PATH) -> ExperimentConfig:
         data=DataConfig(**raw["data"]),
         lora=LoraConfig(**raw["lora"]),
         training=TrainingConfig(**training),
+        analysis=AnalysisConfig(**raw["analysis"]),
     )
