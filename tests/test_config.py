@@ -15,3 +15,9 @@ def test_base_config_matches_methodology():
     assert (training.temperature, training.top_p, training.max_new_tokens) == (0.8, 0.95, 512)
     assert training.seeds == (42, 43, 44)
     assert training.learning_rate is None  # set only by the LR pilot
+
+
+def test_analysis_config_matches_methodology():
+    analysis = load_config().analysis
+    assert analysis.n_resamples == 10_000
+    assert isinstance(analysis.analysis_seed, int)
