@@ -1,0 +1,50 @@
+{
+  "greedy_validation": {
+    "B0": {
+      "format_rate": 0.91,
+      "lenient_accuracy": 0.092,
+      "mean_tokens": 28.24,
+      "n_problems": 500,
+      "strict_accuracy": 0.058,
+      "truncation_rate": 0.008
+    },
+    "B0_fewshot": {
+      "format_rate": 0.976,
+      "lenient_accuracy": 0.494,
+      "mean_tokens": 100.928,
+      "n_problems": 500,
+      "strict_accuracy": 0.49,
+      "truncation_rate": 0.008
+    }
+  },
+  "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "p0": 0.38375,
+  "p0_threshold": 0.1,
+  "rule_overridden": true,
+  "rule_says_fewshot": false,
+  "sampled": {
+    "B0": {
+      "format_mixed_group_fraction": 0.885,
+      "format_rate": 0.666875,
+      "group_size": 8,
+      "mixed_group_fraction": 0.48,
+      "n_problems": 200,
+      "p0": 0.110625,
+      "strict_rate": 0.030625,
+      "truncation_rate": 0.02125
+    },
+    "B0_fewshot": {
+      "format_mixed_group_fraction": 0.465,
+      "format_rate": 0.91125,
+      "group_size": 8,
+      "mixed_group_fraction": 0.71,
+      "n_problems": 200,
+      "p0": 0.38375,
+      "strict_rate": 0.36,
+      "truncation_rate": 0.005
+    }
+  },
+  "trained_prompt": "B0_fewshot",
+  "use_fewshot_prompt": true,
+  "warnings": []
+}

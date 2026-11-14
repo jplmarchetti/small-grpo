@@ -36,6 +36,18 @@ training:
   # Chosen by the LR pilot (checkpoint 8) from {1e-5, 3e-5, 1e-4}; null until then.
   learning_rate: null
 
+preflight:
+  # METHODOLOGY §11 and §13: p0 from 200 problems x group_size samples; few-shot if p0 < 10%.
+  p0_threshold: 0.10
+  # METHODOLOGY §13 (2026-11-14): the rule chose zero-shot (p0 11.1%, within noise); every cell
+  # trains few-shot instead. null = follow the rule.
+  fewshot_override: true
+  n_sampled_problems: 200
+  truncation_alert: 0.10
+  sampling_seed: 42
+  n_audit: 50          # hand-check sheet, drawn from the B0 of the trained prompt
+  audit_seed: 42
+
 evaluation:
   # Greedy evaluation batch. GPU arithmetic depends slightly on batch composition, so this is
   # fixed once and used for every model (B0, B0-fewshot, validation curves, final test).
