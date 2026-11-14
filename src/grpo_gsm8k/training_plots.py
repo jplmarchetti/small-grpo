@@ -86,3 +86,32 @@ def plot_training_curves(run_dir: Path, window: int = 20, title: str | None = No
 
     fig.suptitle(title or run_dir.name)
     return Path(save_fig(fig, str(run_dir / "training_curves.png")))
+
+
+def plot_lr_pilot(pilot_root: Path, learning_rates: Sequence[float], window: int = 10) -> Path:
+    """One line per learning rate: training reward (moving average), validation lenient accuracy, length."""
+    from grpo_gsm8k.lr_pilot import pilot_run_dir  # local import: lr_pilot imports nothing from here
+
+    apply_house_style()
+    colors = [C["blue"], C["orange"], C["red"], C["purple"]]
+    fig, (reward_ax, val_ax, tokens_ax) = plt.subplots(1, 3, figsize=(15, 4.8))
+    for color, lr in zip(colors, learning_rates):
+        run_dir = pilot_run_dir(pilot_root, lr)
+        logs = read_step_logs(run_dir / "train_log.csv")
+        steps = column(logs, "step")
+        label = f"lr {lr:g}"
+        reward_ax.plot(steps, moving_average(column(logs, "mean_reward"), window), color=color, lw=2.4, label=label)
+        tokens_ax.plot(steps, moving_average(column(logs, "mean_tokens"), window), color=color, lw=2.4, label=label)
+        validation = read_val_curve(run_dir / "val_curve.csv")
+        if validation:
+            val_ax.plot(column(validation, "step"), column(validation, "lenient_accuracy"), "o-", color=color,
+                        lw=2.2, ms=8, label=label)
+    reward_ax.set_title(f"training reward (moving average {window})")
+    val_ax.set_title("validation lenient accuracy (greedy)")
+    tokens_ax.set_title("completion tokens (moving average)")
+    for ax in (reward_ax, val_ax, tokens_ax):
+        ax.set_xlabel("training step")
+        ax.xaxis.set_major_locator(MaxNLocator(integer=True))
+    val_ax.legend(loc="best")
+    fig.suptitle("Learning-rate pilot: RC, seed 42")
+    return Path(save_fig(fig, str(pilot_root / "lr_pilot.png")))
