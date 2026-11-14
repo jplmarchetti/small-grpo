@@ -1,4 +1,7 @@
+import json
+
 from grpo_gsm8k.config import load_config
+from grpo_gsm8k.paths import MANIFEST_DIR
 
 
 def test_base_config_matches_methodology():
@@ -14,7 +17,10 @@ def test_base_config_matches_methodology():
     assert training.steps * training.problems_per_step == config.data.train_size  # one pass
     assert (training.temperature, training.top_p, training.max_new_tokens) == (0.8, 0.95, 512)
     assert training.seeds == (42, 43, 44)
-    assert training.learning_rate is None  # set only by the LR pilot
+    # set by the LR pilot (checkpoint 8) and frozen with the tag config-v1
+    pilot = json.loads((MANIFEST_DIR / "lr_pilot.json").read_text())
+    assert training.learning_rate == pilot["chosen_learning_rate"] == 3e-5
+    assert training.learning_rate in config.lr_pilot.learning_rates
 
 
 def test_analysis_config_matches_methodology():

@@ -33,8 +33,9 @@ training:
   micro_batch_size: 4
   checkpoint_every: 50
   seeds: [42, 43, 44]
-  # Chosen by the LR pilot (checkpoint 8) from {1e-5, 3e-5, 1e-4}; null until then.
-  learning_rate: null
+  # Chosen by the LR pilot (checkpoint 8, 2026-11-14) with the rule fixed beforehand: the largest
+  # rate that did not collapse. 1e-4 collapsed; 1e-5 and 3e-5 were stable. See manifests/lr_pilot.json.
+  learning_rate: 3.0e-5
 
 lr_pilot:
   # METHODOLOGY §7 and §13: RC, seed 42, 100 steps per learning rate, validation at steps 0, 50, 100.
