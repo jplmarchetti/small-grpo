@@ -71,8 +71,12 @@ def test_frozen_files_are_unchanged_since_their_tags():
 
 def test_frozen_manifest_matches_the_tagged_commits():
     """Run on the laptop, where .git exists: the recorded hashes are the tagged versions."""
-    if not (REPO_ROOT / ".git").exists():
-        pytest.skip("no git metadata (e.g. the GPU PC mirror)")
+    tags_resolve = all(
+        subprocess.run(["git", "rev-parse", "--verify", "--quiet", tag], cwd=REPO_ROOT, capture_output=True).returncode == 0
+        for tag in FROZEN_FILES
+    )
+    if not tags_resolve:
+        pytest.skip("git tags not available here (e.g. the GPU PC mirror)")
     recorded = json.loads(FROZEN_PATH.read_text())
     assert set(recorded) == set(FROZEN_FILES)
     for tag, files in FROZEN_FILES.items():
