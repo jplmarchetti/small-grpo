@@ -11,6 +11,7 @@ dependencies = [
     "pyyaml>=6.0",
     "huggingface-hub>=0.25",  # download the pinned GSM8K parquet files
     "pyarrow>=17.0",          # read them
+    "matplotlib>=3.9",        # training curves and report figures
 ]
 
 [project.optional-dependencies]

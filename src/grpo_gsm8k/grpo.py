@@ -50,11 +50,12 @@ def compute_group_advantages(rewards: torch.Tensor, eps: float) -> torch.Tensor:
 
 def pad_prompt_and_completion(
     completions: Sequence[TokenizedCompletion], pad_token_id: int, device: torch.device
-) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
-    """Join prompt + completion per row and pad on the right.
+) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor, torch.Tensor]:
+    """Join prompt + completion per row and pad on the LEFT, so every completion ends at the last position.
 
-    Returns input_ids, attention_mask and completion_mask, all (batch, length).
-    completion_mask is 1 exactly on the completion tokens.
+    Returns input_ids, attention_mask, position_ids and completion_mask, all (batch, length).
+    completion_mask is 1 exactly on the completion tokens. Position ids count from 0 at each
+    row's first real token, as during generation, so padding does not shift positions.
     """
     rows = [list(c.prompt_ids) + list(c.completion_ids) for c in completions]
     length = max(len(row) for row in rows)
@@ -62,28 +63,36 @@ def pad_prompt_and_completion(
     attention_mask = torch.zeros((len(rows), length), dtype=torch.long)
     completion_mask = torch.zeros((len(rows), length), dtype=torch.float32)
     for index, (row, completion) in enumerate(zip(rows, completions, strict=True)):
-        input_ids[index, : len(row)] = torch.tensor(row)
-        attention_mask[index, : len(row)] = 1
-        completion_mask[index, len(completion.prompt_ids) : len(row)] = 1.0
-    return input_ids.to(device), attention_mask.to(device), completion_mask.to(device)
+        input_ids[index, length - len(row) :] = torch.tensor(row)
+        attention_mask[index, length - len(row) :] = 1
+        completion_mask[index, length - len(completion.completion_ids) :] = 1.0
+    position_ids = (attention_mask.cumsum(dim=1) - 1).clamp(min=0)
+    return input_ids.to(device), attention_mask.to(device), position_ids.to(device), completion_mask.to(device)
 
 
 def completion_token_log_probs(
     policy: torch.nn.Module, completions: Sequence[TokenizedCompletion], pad_token_id: int
 ) -> tuple[torch.Tensor, torch.Tensor]:
-    """Log-probability of every sampled token, with gradients.
+    """Log-probability of every sampled completion token, with gradients.
 
-    Position t predicts token t+1, so logits are shifted by one. Returns
-    (log_probs, completion_mask), both (batch, length - 1); the mask is 0 on prompt
-    and padding.
+    Position t predicts token t+1. Because completions end at the last position (left
+    padding), only the last `longest completion + 1` positions need logits: computing the
+    full-vocabulary logits for the long few-shot prompt would cost several GB for nothing.
+    Returns (log_probs, completion_mask), both (batch, longest completion); the mask is 0
+    where a shorter row has prompt or padding.
     """
     device = next(policy.parameters()).device
-    input_ids, attention_mask, completion_mask = pad_prompt_and_completion(completions, pad_token_id, device)
-    logits = policy(input_ids=input_ids, attention_mask=attention_mask).logits
-    next_token_logits = logits[:, :-1, :].float()
-    next_tokens = input_ids[:, 1:]
+    input_ids, attention_mask, position_ids, completion_mask = pad_prompt_and_completion(
+        completions, pad_token_id, device
+    )
+    n_scored = max(len(c.completion_ids) for c in completions)
+    logits = policy(
+        input_ids=input_ids, attention_mask=attention_mask, position_ids=position_ids, logits_to_keep=n_scored + 1
+    ).logits
+    next_token_logits = logits[:, :-1, :].float()  # positions L-n-1 .. L-2 predict tokens L-n .. L-1
+    next_tokens = input_ids[:, -n_scored:]
     log_probs = F.log_softmax(next_token_logits, dim=-1).gather(-1, next_tokens.unsqueeze(-1)).squeeze(-1)
-    return log_probs, completion_mask[:, 1:]
+    return log_probs, completion_mask[:, -n_scored:]
 
 
 # ---------------------------------------------------------------- loss and gradient
