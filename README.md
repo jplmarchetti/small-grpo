@@ -2,7 +2,7 @@
 
 When GRPO is applied to a base language model on math problems, its benchmark score rises quickly. Part of that gain may only be the model learning to **write the answer where the grader looks for it**, not **answering more problems correctly**. This project measures how much is each.
 
-**Status (2026-11-14):** checkpoints 1–7 done. Every cell trains with the few-shot prompt (documented override, METHODOLOGY §13), p0 = 0.384; hand-check of the lenient grader: 100% agreement (50/50). Smoke test (RC, 20 steps) passes: 6.7 s/step and 3.6 GB peak VRAM, so ~56 min of training plus ~18 min of validation per run. Next: LR pilot.
+**Status (2026-11-14):** checkpoints 1–8 done. Every cell trains with the few-shot prompt (documented override, METHODOLOGY §13), p0 = 0.384; hand-check of the lenient grader 100% (50/50). Smoke test: 6.7 s/step, 3.6 GB. **LR pilot (rule fixed beforehand): 3e-5 chosen** (1e-4 collapsed); RC at 3e-5 rises to 59% lenient but drops the FINAL format (17%). Frozen as `config-v1`. Next: the four seed-42 runs.
 
 ## The experiment in short
 

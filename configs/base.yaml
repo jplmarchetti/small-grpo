@@ -33,8 +33,20 @@ training:
   micro_batch_size: 4
   checkpoint_every: 50
   seeds: [42, 43, 44]
-  # Chosen by the LR pilot (checkpoint 8) from {1e-5, 3e-5, 1e-4}; null until then.
-  learning_rate: null
+  # Chosen by the LR pilot (checkpoint 8, 2026-11-14) with the rule fixed beforehand: the largest
+  # rate that did not collapse. 1e-4 collapsed; 1e-5 and 3e-5 were stable. See manifests/lr_pilot.json.
+  learning_rate: 3.0e-5
+
+lr_pilot:
+  # METHODOLOGY §7 and §13: RC, seed 42, 100 steps per learning rate, validation at steps 0, 50, 100.
+  # Fixed before any pilot curve exists. A rate "collapses" if, at step 50 or 100, compared with step 0:
+  learning_rates: [1.0e-5, 3.0e-5, 1.0e-4]
+  steps: 100
+  seed: 42
+  max_lenient_drop: 0.05        # lenient accuracy falls by more than 5 points (about 2x the noise of 500 problems)
+  max_truncation_rise: 0.05     # or the truncation rate rises by more than 5 points
+  min_length_ratio: 0.5         # or mean completion length falls below half of step 0
+  # Chosen rate: the largest one that does not collapse.
 
 preflight:
   # METHODOLOGY §11 and §13: p0 from 200 problems x group_size samples; few-shot if p0 < 10%.

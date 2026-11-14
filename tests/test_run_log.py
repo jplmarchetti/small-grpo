@@ -67,3 +67,18 @@ def test_plot_writes_a_png(tmp_path):
     )
     path = plot_training_curves(tmp_path, window=5)
     assert path.exists() and path.stat().st_size > 10_000
+
+
+def test_lr_pilot_plot(tmp_path):
+    from grpo_gsm8k.lr_pilot import pilot_run_dir
+    from grpo_gsm8k.training_plots import plot_lr_pilot
+
+    for lr in (1e-5, 3e-5):
+        run_dir = pilot_run_dir(tmp_path, lr)
+        for step in range(1, 21):
+            append_step_log(run_dir / "train_log.csv", make_log(step))
+        (run_dir / "val_curve.csv").write_text(
+            "step,lenient_accuracy,strict_accuracy,format_rate,mean_tokens,truncation_rate\n"
+            "0,0.49,0.49,0.97,100,0\n10,0.5,0.5,0.97,98,0\n"
+        )
+    assert plot_lr_pilot(tmp_path, (1e-5, 3e-5)).exists()

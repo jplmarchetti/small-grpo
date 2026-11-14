@@ -55,6 +55,16 @@ class TrainingConfig:
 
 
 @dataclass(frozen=True)
+class LrPilotConfig:
+    learning_rates: tuple[float, ...]
+    steps: int
+    seed: int
+    max_lenient_drop: float
+    max_truncation_rise: float
+    min_length_ratio: float
+
+
+@dataclass(frozen=True)
 class PreflightConfig:
     p0_threshold: float
     fewshot_override: bool | None  # None = follow the go / no-go rule
@@ -82,6 +92,7 @@ class ExperimentConfig:
     data: DataConfig
     lora: LoraConfig
     training: TrainingConfig
+    lr_pilot: LrPilotConfig
     preflight: PreflightConfig
     evaluation: EvaluationConfig
     analysis: AnalysisConfig
@@ -96,6 +107,7 @@ def load_config(path: Path = BASE_CONFIG_PATH) -> ExperimentConfig:
         data=DataConfig(**raw["data"]),
         lora=LoraConfig(**raw["lora"]),
         training=TrainingConfig(**training),
+        lr_pilot=LrPilotConfig(**{**raw["lr_pilot"], "learning_rates": tuple(raw["lr_pilot"]["learning_rates"])}),
         preflight=PreflightConfig(**raw["preflight"]),
         evaluation=EvaluationConfig(**raw["evaluation"]),
         analysis=AnalysisConfig(**raw["analysis"]),
