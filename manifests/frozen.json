@@ -1,0 +1,11 @@
+{
+  "config-v1": {
+    "configs/base.yaml": "14944b5913ed2b501bace70f0e0cd036515ba3347f0a35ba72f2413f6b3f79eb",
+    "manifests/preflight.json": "d8bee65cd287916cec76503fc8e5b63838e7fd14d38c27fdfb4ca33620f6357b",
+    "manifests/revisions.json": "ad3eefa930cbcc0d3a87b479cad71d317d6805a474a54f421a00f0fb924c69f9",
+    "manifests/splits.json": "5ec0d47b959c5d55ca1a43a0f1b9590046c8a3b011e361acf41fffd2269fdb5a"
+  },
+  "grader-v1": {
+    "src/grpo_gsm8k/graders.py": "3b69df03a96ee8626d5e32b7569892cbd673b2f21702023e640f6a07e55fc4cb"
+  }
+}
