@@ -267,7 +267,7 @@ Since there are 60 minutes in an hour, 10 minutes is equal to 10/60 = 1/6 of an 
 So, Marcos needs to travel 5 miles in 1/6 of an hour, which is equal to 5 * (60/1) = 300 miles.
 Therefore, Marcos needs to go at a speed of 300 miles per hour to make it to work on time.
 FINAL: 300
-",1,0
+",0,0
 train-02150,"Rhea buys 2 trays of eggs every week for her family. Her son and daughter eat 2 eggs every morning, and Rhea and her husband eat 4 eggs every night. If each tray has 24 eggs, how many eggs are not being eaten every week?",6," Rhea buys 2 trays of eggs every week, so she buys 2 * 24 = 48 eggs.
 Her son and daughter eat 2 eggs every morning, so they eat 2 * 7 = 14 eggs in a week.
 Rhea and her husband eat 4 eggs every night, so they eat 4 * 7 = 28 eggs in a week.
