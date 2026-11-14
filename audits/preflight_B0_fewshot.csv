@@ -6,26 +6,26 @@ He has 8 more pandas than lions, so he has 25 + 8 = 33 pandas.
 He has 1/3 as many dogs as pandas, so he has 33 / 3 = 11 dogs.
 Therefore, John has a total of 15 snakes + 30 monkeys + 25 lions + 33 pandas + 11 dogs = 104 animals.
 FINAL: 104
-",,0
+",0,0
 train-06698,"Marie has 98 unread messages on her phone. She decides to clear them by reading 20 messages a day. However, she also gets 6 new messages a day. How many days will it take her to read all her unread messages?",7," Marie reads 20 messages a day and gets 6 new messages a day, so she reads 20 + 6 = 26 messages a day.
 To read all her unread messages, she needs to read 98 - 26 = 72 messages.
 Since she reads 26 messages a day, it will take her 72 / 26 = 2.7 days to read all her unread messages.
 FINAL: 2.7
-",,0
+",0,0
 train-04207,"Mitzel spent 35% of her allowance. If she spent $14, how much money is left in her allowance?",26," Let's assume Mitzel's allowance is $A.
 35% of her allowance is 0.35A.
 If she spent $14, then 0.35A = $14.
 To find the value of A, we divide both sides of the equation by 0.35: A = $14 / 0.35 = $40.
 Therefore, Mitzel has $40 left in her allowance.
 FINAL: 40
-",,0
+",0,0
 train-05862,"Arnold owns three cars. The first car averages 50 miles per gallon of gas. The second car averages 10 miles per gallon of gas. And the third car averages 15 miles per gallon of gas. He splits his 450-mile monthly driving mileage equally amongst his three cars.  If gas costs $2 per gallon, how much does he spend on gas each month?",56," Arnold's total mileage is 450 miles / 3 cars = 150 miles per car.
 So, his total mileage is 150 miles per car * 3 cars = 450 miles per car.
 He splits his mileage equally among his three cars, so each car gets 450 miles / 3 cars = 150 miles per car.
 He averages 10 miles per gallon of gas, so he needs 450 miles / 10 miles per gallon = 45 gallons of gas.
 Gas costs $2 per gallon, so he spends 45 gallons * $2 per gallon = $90 on gas each month.
 FINAL: $90
-",,0
+",0,0
 train-03248,"There are 180 students in ninth grade. 1/4 of them bombed their finals because they were going through difficult breakups. 1/3rd of the rest didn't show up to take the test, and another 20 got less than a D. How many students passed their finals?",70," First, we need to find out how many students bombed their finals. 1/4 of 180 students = 180 * 1/4 = 45 students.
 So, there are 180 - 45 = 135 students remaining.
 Next, we need to find out how many of these students didn't show up to take the test. 1/3rd of 135 students = 135 * 1/3 = 45 students.
@@ -33,16 +33,16 @@ So, there are 135 - 45 = 90 students remaining.
 Finally, we need to find out how many of these students got less than a D. 20 students got less than a D.
 So, there are 90 - 20 = 70 students who passed their finals.
 FINAL: 70
-",,1
+",1,1
 train-04210,"For the gala luncheon planning committee, Margaret wants to serve chicken salad sandwiches using mini croissants.  She wants there to be enough food that each person on the committee can have 2 sandwiches each.  Her bakery offers 12 minis croissants for $8.00.  There are 24 people on the committee. How much will she spend on croissants?",32," Margaret needs 24 x 2 = 48 mini croissants.
 She can buy 48 / 12 = 4 sets of 12 minis croissants.
 So she will spend 4 x $8.00 = $32.00 on croissants.
 FINAL: $32.00
-",,1
+",1,1
 train-03050,Janet bought some muffins at the bakery. Each muffin is 75 cents. Janet paid $20 and got $11 in change back. How many muffins did Janet buy?,12," Janet paid $20 - $11 = $9 for the muffins.
 Since each muffin is 75 cents, Janet bought 9 / 0.75 = 12 muffins.
 FINAL: 12
-",,1
+",1,1
 train-03562,"CJ, KJ, and AJ collect stamps.  CJ has 5 more than twice the number of stamps that KJ has, and KJ has half as many as AJ.  If the three boys have 930 stamps all together, how many stamps does AJ have?",370," Let's assume AJ has x stamps.
 KJ has half as many as AJ, so KJ has x/2 stamps.
 CJ has 5 more than twice the number of stamps that KJ has, so CJ has 2(x/2) + 5 = x + 5 stamps.
@@ -54,79 +54,79 @@ Subtracting 10 from both sides, we get 4x = 1850.
 Dividing both sides by 4, we get x = 462.5.
 Since the number of stamps must be a whole number, we round down to 462 stamps.
 FINAL: 462
-",,0
+",0,0
 train-06425,"Bart fills out surveys to earn money. He receives $0.2 for every question he answers in the survey. Each survey has 10 questions. On Monday he finished 3 surveys, and on Tuesday 4 surveys. How much money did he earn during these two days?",14," On Monday, Bart earned 3 surveys * $0.2 per survey = $0.6
 On Tuesday, Bart earned 4 surveys * $0.2 per survey = $0.8
 Therefore, Bart earned a total of $0.6 + $0.8 = $1.4 during these two days.
 FINAL: 1.4
-",,0
+",0,0
 train-03139,Charley has a bag that contains 51 white beads and 90 black beads. He reaches in the bag and pulls out 1/6 of the black beads and a third of the white beads. How many beads in total did Charley pull out?,32," Charley pulled out 90 x 1/6 = 15 black beads.
 Charley pulled out 51 x 1/3 = 17 white beads.
 Charley pulled out a total of 15 + 17 = 32 beads.
 FINAL: 32
-",,1
+",1,1
 train-07202,"Chris has twelve marbles, and Ryan has twenty-eight marbles. If they put marbles together in a pile and then each takes away 1/4 of marbles from the pile, calculate the number of marbles remaining in the pile.",20," After Ryan takes away 1/4 of the marbles, he has 28 - (1/4 * 28) = 28 - 7 = 21 marbles left.
 Then, Chris takes away 1/4 of the remaining marbles, which is 21 - (1/4 * 21) = 21 - 5.25 = 15.75 marbles.
 So, Chris has 15.75 marbles left.
 FINAL: 15.75
-",,0
+",0,0
 train-06456,"Mr. and Mrs. McPherson have to renew their rent by the end of the year. They agreed that Mrs. McPherson would raise 30% of the money. If their rent is $1200 per year, how much does Mr. McPherson need to raise to complete the rent?",840," Mrs. McPherson will raise 30% of the rent, which is 30/100 * $1200 = $360
 Mr. McPherson needs to raise $1200 - $360 = $840 to complete the rent.
 FINAL: 840
-",,1
+",1,1
 train-03101,"A convenience store sells 180  gallons of soda a week.  They buy syrup boxes that can make 30 gallons of soda, and each box costs $40.  How much do they pay for syrup a week?",240," They pay for 6 boxes of syrup because 180 / 30 = 6
 They pay $240 for syrup a week because 6 * $40 = $240
 FINAL: $240
-",,1
+",1,1
 train-03402,"A movie theater company is advertising a deal of a movie ticket, a bucket of popcorn, a drink, and a box of candy for $20. Normally, a movie ticket costs $8, a bucket of popcorn costs three dollars less, a drink costs a dollar more than popcorn, and a candy costs half as much as a drink. How many dollars does the deal save a customer who buys a ticket, popcorn, drink, and candy normally?",2," The cost of popcorn is $8 - $3 = $5
 The cost of a drink is $5 + $1 = $6
 The cost of a candy is $6 / 2 = $3
 The total cost of the deal is $8 + $5 + $6 + $3 = $22
 The deal saves a customer $22 - $20 = $2
-FINAL: 2",,1
+FINAL: 2",1,1
 train-03069,Marianne was 20 years old when Bella was 8 years old. How old will Marianne be when Bella turns 18?,30," Marianne is currently 20 - 8 = 12 years old.
 When Bella turns 18, Marianne will be 12 + 18 = 30 years old.
 FINAL: 30
-",,1
+",1,1
 train-05275,"Bert, Ernie, and Peggy collect stamps.  Bert has four times as many stamps as Ernie, but Ernie has three times as many stamps as Peggy.  If Peggy currently has 75 stamps in her collection, how many stamps does she need to add to her collection to have a collection as large as Bert's collection?",825," If Peggy currently has 75 stamps, and Ernie has three times as many stamps as Peggy, then Ernie has 75 * 3 = 225 stamps.
 If Bert has four times as many stamps as Ernie, then Bert has 225 * 4 = 900 stamps.
 To have a collection as large as Bert's, Peggy needs to add 900 - 75 = 825 stamps.
 FINAL: 825
-",,1
+",1,1
 train-01738,"Steve has decided to become a baker. On Mondays, Wednesdays and Fridays, he bakes apple pies. On Tuesdays and Thursdays, he bakes cherry pies. If he bakes 12 pies per day, how many more apple pies does he bake than cherry pies in one week?",12," In one week, Steve bakes 12 pies x 3 days = 36 apple pies.
 In one week, Steve bakes 12 pies x 2 days = 24 cherry pies.
 Therefore, Steve bakes 36 - 24 = 12 more apple pies than cherry pies in one week.
 FINAL: 12
-",,1
+",1,1
 train-06939,John watches a TV show and they announce they are going to do 1 more season.  Each season is 22 episodes except for the last season which is 4 episodes longer.  There were 9 seasons before the announcement.  If each episode is .5 hours how long will it take to watch them all after the last season finishes?,112," The total number of episodes is 9 seasons * 22 episodes per season = 198 episodes.
 The last season is 4 episodes longer than the others, so it has 22 episodes + 4 episodes = 26 episodes.
 The total number of episodes is 198 episodes + 26 episodes = 224 episodes.
 Since each episode is 0.5 hours long, the total time to watch all the episodes is 224 episodes * 0.5 hours per episode = 112 hours.
 FINAL: 112
-",,1
+",1,1
 train-02227,"Russel and Jen went to the circus. Jen played a shooting game twice, while Russel rode the carousel three times. If the shooting game costs 5 tickets and the carousel costs 3 tickets. How many tickets did they use?",19," Jen played the shooting game twice, so she used 2 * 5 = 10 tickets.
 Russel rode the carousel three times, so he used 3 * 3 = 9 tickets.
 Therefore, they used a total of 10 + 9 = 19 tickets.
 FINAL: 19
-",,1
+",1,1
 train-03610,"Four people in a law firm are planning a party. Mary will buy a platter of pasta for $20 and a loaf of bread for $2. Elle and Andrea will split the cost for buying 4 cans of soda which cost $1.50 each, and chicken wings for $10. Joe will buy a cake that costs $5. How much more will Mary spend than the rest of the firm put together?",1," The total cost for Mary is $20 + $2 = $22
 The total cost for Elle and Andrea is 4 cans of soda x $1.50 = $6
 The total cost for Joe's cake is $5
 The total cost for the rest of the firm is $22 + $6 + $5 = $33
 Mary will spend $22 more than the rest of the firm
 FINAL: 22
-",,0
+",0,0
 train-05571,"Mason, Noah and Jacob want to have an eating contest but can't agree on what food to eat. Mason wants hot dogs, Noah insists on burgers, and Jacob thinks they should eat pies. They finally agree that everyone can eat whatever they want and they'll use the weight of the food to determine who wins. A hot dog weighs 2 ounces, a burger weighs 5 ounces, and a pie weighs 10 ounces. Jacob eats three fewer pies than Noah eats burgers. Mason eats 3 times as many hotdogs as the number of pies consumed by Jacob. If Noah ate 8 burgers, what is the total weight of the hotdogs that Mason ate?",30," Noah ate 8 burgers, so he ate 8 - 3 = 5 burgers.
 Mason ate 3 times as many hotdogs as the number of burgers consumed by Noah, so he ate 3 * 5 = 15 hotdogs.
 Each hotdog weighs 2 ounces, so Mason ate 15 * 2 = 30 ounces of hotdogs.
-FINAL: 30",,1
+FINAL: 30",1,1
 train-01485,"Adam has 50 balls. 20 balls are red, 10 are blue, and the rest are either pink or orange. If there are 3 times as many pink as orange balls, how many orange balls are there?",5," Let x be the number of orange balls. Then the number of pink balls is 3x.
 The total number of balls is 20 + 10 + x + 3x = 30 + 4x.
 We know that the total number of balls is 50, so 30 + 4x = 50.
 Solving for x, we get x = 5.
 Therefore, there are 3 * 5 = 15 orange balls.
 FINAL: 15
-",,0
+",0,0
 train-04583,"Ruby was going to order pizza for dinner.  Her son would only eat pepperoni pizza.  Her daughter would only eat sausage.  Ruby and her husband wanted black olive and mushroom pizza.  To make life easy, Ruby decided to order an entire pizza for each of her children and she would split one with her husband.  The pizza restaurant charged $10.00 per pizza and $1.00 per topping.  She also needed to add a $5.00 tip.  Including tip, how much would the pizza order cost?",39," Ruby ordered 2 pepperoni pizzas, 1 sausage pizza, and 1 black olive and mushroom pizza. 
 The cost of the pepperoni pizza is 2 * $10.00 = $20.00
 The cost of the sausage pizza is 1 * $10.00 = $10.00
@@ -134,55 +134,55 @@ The cost of the black olive and mushroom pizza is 1 * $10.00 = $10.00
 The total cost of the pizzas is $20.00 + $10.00 + $10.00 = $40.00
 Ruby also needs to add a $5.00 tip, so the total cost of the pizza order is $40.00 + $5.00 = $45.00
 FINAL: $45.00
-",,0
+",0,0
 train-00412,"Uncle Jude baked 256 cookies. He gave 15 cookies to Tim, 23 cookies to Mike, kept some in the fridge and gave the rest to Anna. How many cookies did he put in the fridge if he gave twice as many cookies as he gave Tim to Anna?",188," Uncle Jude gave 15 cookies to Tim and 23 cookies to Mike, so he gave away a total of 15 + 23 = 38 cookies.
 He baked 256 cookies, so he gave away 256 - 38 = 218 cookies.
 Since he gave twice as many cookies to Anna as he gave to Tim, he gave Anna 38 / 2 = 19 cookies.
 Therefore, Uncle Jude put 19 cookies in the fridge.
 FINAL: 19
-",,0
+",0,0
 train-06897,Mike gets paid 100 dollars a week.  He decides to spend half of that at an arcade.  He spends 10 dollars at the arcade on food and uses the rest on arcade tokens. He can play for 1 hour for $8. How many minutes can he play?,300," Mike spends half of his weekly earnings at the arcade, so he spends 100 / 2 = 50 dollars at the arcade.
 He spends 10 dollars on food, so he has 50 - 10 = 40 dollars left.
 He can play for 1 hour for $8, so he can play for 40 / 8 = 5 hours.
 Since there are 60 minutes in an hour, he can play for 5 x 60 = 300 minutes.
 FINAL: 300
-",,1
+",1,1
 train-02204,"While passing by a store, Miley noticed that a bag that cost $150 last week is now on sale for $135. What percent is the discount?",10," The discount is 150 - 135 = 15 dollars
 The discount is 15 / 150 = 0.1 or 10%
 FINAL: 10
-",,1
+",1,1
 train-05695,One hundred chips were divided by Ian and Lyle in the ratio 4:6. What percentage of the chips did Lyle have?,60," The total ratio is 4 + 6 = 10
 Since the total ratio is 100, Lyle has 60 chips because 100 x 6/10 = 60
 FINAL: 60
-",,1
+",1,1
 train-03225,Chris bought 8 movies on DVD for $12 each and 4 movies on Blu-ray for $18 each. What is the average price he paid per movie?,14," Chris bought 8 movies on DVD for $12 each, so he paid 8 * $12 = $96 for the DVDs.
 He also bought 4 movies on Blu-ray for $18 each, so he paid 4 * $18 = $72 for the Blu-rays.
 The total amount he paid for all the movies is $96 + $72 = $168.
 He bought a total of 8 + 4 = 12 movies.
 Therefore, the average price he paid per movie is $168 / 12 = $14.
 FINAL: 14
-",,1
+",1,1
 train-06156,A man drives 60 mph for 3 hours.  How fast would he have to drive over the next 2 hours to get an average speed of 70 mph?,85," To find the speed he needs to drive over the next 2 hours, we first need to find the total distance he has driven in the first 3 hours.
 60 mph * 3 hours = 180 miles
 To find the total distance he needs to drive in the next 2 hours, we need to subtract the distance he has already driven from the total distance he needs to drive.
 180 miles - 180 miles = 0 miles
 Since he has already driven 0 miles in the next 2 hours, he does not need to drive any more marbles.
 FINAL: 0
-",,0
+",0,0
 train-00098,"Hector purchased a container of gumballs.  He gave 4 to Todd, then he gave twice as many as he had given Todd to Alisha, and then he gave 5 less than four times as many to Bobby as he had given to Alisha.  If Hector had 6 gumballs remaining, what is the total number of gumballs that Hector purchased?",45," Let's denote the number of gumballs Hector gave to Todd as T. According to the problem, Hector gave twice as many gumballs to Alisha as he had given Todd, so Alisha received 2T gumballs. Hector also gave 5 less than four times as many gumballs to Bobby as he had given to Alisha, so Bobby received 4(2T) - 5 = 8T - 5 gumballs. Hector had 6 gumballs remaining, so the total number of gumballs he purchased is T + 2T + (8T - 5) + 6 = 11T - 5.
 Since we don't have any information about the number of gumballs Hector gave to Todd or Alisha, we cannot determine the exact number of gumballs Hector purchased. However, we can express the total number of gumballs Hector purchased as 11T - 5.
-FINAL: 11T - 5",,0
+FINAL: 11T - 5",0,0
 train-06046,"Ellen’s doctor instructed her to eat a 2,200 calorie a day diet. For breakfast, she ate 353 calories. For lunch, she had 885. She had an afternoon snack of 130 calories. How many calories does she have left for dinner?",832," Ellen has 2,200 - 353 - 885 - 130 = 632 calories left for dinner.
 FINAL: 632
-",,0
+",0,0
 train-00992,"Hannah is making banana bread. She needs to use 3 cups of flour for every cup of banana mush. It takes 4 bananas to make one cup of mush. If Hannah uses 20 bananas, how many cups of flour should she use?",15," Hannah needs 3 x 4 = 12 cups of bananas.
 So she should use 12 / 3 = 4 cups of flour.
 FINAL: 4
-",,0
+",0,0
 train-01736,"A box of chocolate bars was shared equally between Mike, Rita and Anita. If the box contains 12 bars, how many bars did Mike and Rita get (combined)?",8," Since the box contains 12 bars and they were shared equally, each person gets 12 / 3 = 4 bars.
 Mike and Rita together got 4 + 4 = 8 bars.
 FINAL: 8
-",,1
+",1,1
 train-06031,Sam and Drew have a combined age of 54. Sam is half of Drew's age. How old is Sam?,18," Let's assume Drew's age is x.
 Since Sam is half of Drew's age, Sam's age is x/2.
 The combined age of Sam and Drew is x + x/2 = 54.
@@ -191,52 +191,52 @@ Multiplying both sides by 2/3, we get x = 36.
 Therefore, Drew is 36 years old.
 Sam is half of Drew's age, so Sam is 36/2 = 18 years old.
 FINAL: 18
-",,1
+",1,1
 train-05298,"Carla works at a food bank and she currently has stocked up 2000 cans of food. One day, 500 people showed up and took 1 can of food each. Carla had to then restock 1500 more cans to keep up with demand. The next day, 1000 people showed up and took 2 cans of food each. Carla restocked again with 3000 cans of food this time. How many cans of food did Carla give away?","2,500"," On the first day, 500 people took 1 can of food each, so Carla gave away 500 cans.
 On the second day, 1000 people took 2 cans of food each, so Carla gave away 1000 x 2 = 2000 cans.
 In total, Carla gave away 500 + 2000 = 2500 cans of food.
 FINAL: 2500
-",,1
+",1,1
 train-00143,"Toby is counting goldfish in the local pond. He knows that only 25% of goldfish are at the surface and the rest are too deep below the surface to be able to see. If he counts 15 goldfish, how many are below the surface?",45," Since 25% of the goldfish are at the surface, the remaining 75% are below the surface.
 If Toby counts 15 goldfish, then 75% of 15 is 0.75 * 15 = 11.25
 Since Toby can't have a fraction of a goldfish, he must have lost 11 goldfish.
 FINAL: 11
-",,0
+",0,0
 train-04195,"Katy participated in a summer reading program at her local library. She read 8 books in June, twice as many in July and three fewer in August than she did in July. How many books did Katy read during the summer?",37," Katy read 8 books in June.
 In July, she read twice as many books as she did in June, so she read 8 x 2 = 16 books.
 In August, she read three fewer books than she did in July, so she read 16 - 3 = 13 books.
 Therefore, Katy read a total of 8 + 16 + 13 = 37 books during the summer.
 FINAL: 37
-",,1
+",1,1
 train-06478,"Bob has planted corn in his garden, and it has just started to sprout. A week after planting it, it had grown 2 inches. The next week, its height increased by twice as much as it had the first week. In the third week, it grew 4 times as much as it did the week before. How tall are the corn plants now?",22," In the first week, the corn plants grew 2 inches.
 In the second week, the corn plants grew twice as much as the first week, so they grew 2 x 2 = 4 inches.
 In the third week, the corn plants grew 4 times as much as the second week, so they grew 4 x 4 = 16 inches.
 Therefore, the corn plants are now 2 + 4 + 16 = 22 inches tall.
-FINAL: 22",,1
+FINAL: 22",1,1
 train-02447,"When Nathan is cold, he adds an extra blanket to his bed. Each blanket warms him up by 3 degrees. One night, he was cold enough that he added half of the 14 blankets in his closet on his bed. How many degrees did the blankets warm Nathan up?",21," Nathan added 14 / 2 = 7 blankets to his bed.
 Each blanket warms him up by 3 degrees, so 7 blankets warmed him up by 7 * 3 = 21 degrees.
 FINAL: 21
-",,1
+",1,1
 train-03357,James buys 100 tennis balls and gives half of them away.  The other half he puts into 5 large containers.  How many tennis balls go in each container?,10," James gives away 100 / 2 = 50 tennis balls.
 He puts 50 / 5 = 10 tennis balls in each container.
 FINAL: 10
-",,1
+",1,1
 train-06814,"The school is organizing a trip to the museum. 4 buses were hired to take the children and teachers to their destination. The second bus has twice the number of people on it as the first bus. The third bus has 6 fewer people than the second bus. The fourth bus has 9 more people than the first bus. If the first bus has 12 people, how many people are going to the museum in total?",75," The second bus has twice the number of people as the first bus, so it has 12 x 2 = 24 people.
 The third bus has 6 fewer people than the second bus, so it has 24 - 6 = 18 people.
 The fourth bus has 9 more people than the first bus, so it has 12 + 9 = 21 people.
 In total, there are 12 + 24 + 18 + 21 = 75 people going to the museum.
 FINAL: 75
-",,1
+",1,1
 train-04302,"A restaurant makes 40 more pizzas than hot dogs every day. If the restaurant makes 60 hot dogs every day, how many pizzas and hot dogs will it make in June?",4800," In June, the restaurant makes 60 hot dogs x 3 months = 180 hot dogs.
 Since the restaurant makes 40 more pizzas than hot dogs every day, it makes 180 + 40 = 220 pizzas.
 In total, the restaurant will make 180 hot dogs + 220 pizzas = 400 pizzas and hot dogs in June.
 FINAL: 400
-",,0
+",0,0
 train-00327,"It takes 15 mink skins to make a coat. Andy buys 30 minks and each mink has 6 babies, but half the total minks are set free by activists. How many coats can he make?",7," Andy bought 30 minks and each mink has 6 babies, so he has a total of 30 x 6 = 180 baby minks.
 Half of the total minks are set free, so Andy has 180 / 2 = 90 minks left.
 Each coat requires 15 mink skins, so Andy can make 90 / 15 = 6 coats.
 FINAL: 6
-",,0
+",0,0
 train-02244,"A farm has 5 less than 9 times the amount of hens as roosters.  If there are 75 total chickens, how many hens are there?",67," Let's say the number of roosters is R and the number of hens is H.
 According to the problem, H = 9R - 5
 The total number of chickens is R + H = 75
@@ -246,35 +246,35 @@ Adding 5 to both sides, we get 10R = 80
 Dividing both sides by 10, we get R = 8
 Substituting the value of R back into the first equation, we get H = 9(8) - 5 = 71
 FINAL: 71
-",,0
+",0,0
 train-00502,"At a garage sale, Tish bought 4 items: a red horseshoe magnet, two stuffed animals, and a large sticker which read, ""Why can't teachers solve their own math problems?""  The magnet cost three times more than the sticker, but only one quarter the price of the two stuffed animals combined.  If the Magnet cost $3, how much, in dollars, did a single stuffed animal cost?",6," The magnet cost $3, so the sticker cost $3 / 4 = $0.75
 The magnet cost three times more than the sticker, so the magnet cost $3 * 3 = $9
 The two stuffed animals combined cost $9 / 2 = $4.50
 Therefore, a single stuffed animal cost $4.50 - $0.75 = $3.75
 FINAL: 3.75
-",,0
+",0,0
 train-05520,John's new computer cost $1500.  He needs to get a monitor and other peripherals that cost 1/5 that much.  He also wants to upgrade the $300 video card in the base computer with one that costs twice as much.  How much did he spend?,2100," The cost of the monitor and peripherals is 1/5 * $1500 = $300
 The cost of the upgraded video card is 2 * $300 = $600
 So, John spent $1500 + $300 + $600 = $2400
 FINAL: 2400
-",,0
+",0,0
 train-06850,"Dave breaks 2 guitar strings per night when playing live.  If he performs 6 shows a week for 12 weeks, how many guitar strings will he need to replace?",144," Dave breaks 2 guitar strings per night, so in one week, he breaks 2 x 6 = 12 guitar strings.
 In 12 weeks, he will break 12 x 12 = 144 guitar strings.
 FINAL: 144
-",,1
+",1,1
 train-00735,Marcos has to get across a 5 mile lake in his speedboat in 10 minutes so he can make it to work on time. How fast does he need to go in miles per hour to make it?,30," To make it to work on time, Marcos needs to travel 5 miles in 10 minutes.
 Since there are 60 minutes in an hour, 10 minutes is equal to 10/60 = 1/6 of an hour.
 So, Marcos needs to travel 5 miles in 1/6 of an hour, which is equal to 5 * (60/1) = 300 miles.
 Therefore, Marcos needs to go at a speed of 300 miles per hour to make it to work on time.
 FINAL: 300
-",,0
+",1,0
 train-02150,"Rhea buys 2 trays of eggs every week for her family. Her son and daughter eat 2 eggs every morning, and Rhea and her husband eat 4 eggs every night. If each tray has 24 eggs, how many eggs are not being eaten every week?",6," Rhea buys 2 trays of eggs every week, so she buys 2 * 24 = 48 eggs.
 Her son and daughter eat 2 eggs every morning, so they eat 2 * 7 = 14 eggs in a week.
 Rhea and her husband eat 4 eggs every night, so they eat 4 * 7 = 28 eggs in a week.
 In total, Rhea and her family eat 14 + 28 = 42 eggs in a week.
 Therefore, there are 48 - 42 = 6 eggs not being eaten every week.
 FINAL: 6
-",,1
+",1,1
 train-01925,"Tyson can swim at a speed of 3 miles per hour in a lake and 2.5 mph in an ocean. This season, half his races happened in lakes and half his races happened in the ocean. He had ten total races, each of which was 3 miles long. How much time did he spend in his races?",11," Tyson swam 5 miles in the lake because 10 / 2 = 5
 He swam 2.5 miles in the ocean because 10 - 5 = 5
 He swam 5 miles in the lake because 3 / 2.5 = 1.2
@@ -299,4 +299,4 @@ He swam 12 miles in total because 12 / 2 = 6
 He swam 12 miles in total because 6 * 2 = 12
 He swam 12 miles in total because 12 / 2 = 6
 He swam 12 miles in total because 6 * 2 = 12
-He swam 12 miles in total because 12 / 2 =",,0
+He swam 12 miles in total because 12 / 2 =",0,0
