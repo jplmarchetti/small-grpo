@@ -93,35 +93,40 @@ def test_advantages_reject_flat_rewards():
 
 
 def test_completion_mask_covers_exactly_the_completion_tokens():
+    """Left padding: every completion ends at the last position."""
     completions = [FakeCompletion([5, 6, 7], [8, 9]), FakeCompletion([5], [8, 9, 10, 11])]
-    input_ids, attention_mask, completion_mask = pad_prompt_and_completion(completions, PAD_TOKEN_ID, "cpu")
+    input_ids, attention_mask, position_ids, completion_mask = pad_prompt_and_completion(completions, PAD_TOKEN_ID, "cpu")
     assert input_ids.tolist() == [[5, 6, 7, 8, 9], [5, 8, 9, 10, 11]]
     assert completion_mask.tolist() == [[0, 0, 0, 1, 1], [0, 1, 1, 1, 1]]
-    assert attention_mask.tolist() == [[1, 1, 1, 1, 1], [1, 1, 1, 1, 1]]
     short = [FakeCompletion([5], [6])] + completions
-    _, attention_mask, completion_mask = pad_prompt_and_completion(short, PAD_TOKEN_ID, "cpu")
-    assert completion_mask[0].tolist() == [0, 1, 0, 0, 0]  # padding is never a completion token
-    assert attention_mask[0].tolist() == [1, 1, 0, 0, 0]
+    input_ids, attention_mask, position_ids, completion_mask = pad_prompt_and_completion(short, PAD_TOKEN_ID, "cpu")
+    assert input_ids[0].tolist() == [0, 0, 0, 5, 6]
+    assert completion_mask[0].tolist() == [0, 0, 0, 0, 1]  # padding is never a completion token
+    assert attention_mask[0].tolist() == [0, 0, 0, 1, 1]
+    assert position_ids[0].tolist() == [0, 0, 0, 0, 1]  # positions start at the first real token
 
 
-def test_log_probs_match_a_manual_forward(tiny_policy):
+def test_log_probs_match_a_manual_full_forward(tiny_policy):
+    """Scoring only the completion positions gives the same values as full logits."""
     completion = FakeCompletion([3, 4, 5], [6, 7])
     log_probs, mask = completion_token_log_probs(tiny_policy, [completion], PAD_TOKEN_ID)
     ids = torch.tensor([[3, 4, 5, 6, 7]], device=DEVICE)
     all_log_probs = torch.log_softmax(tiny_policy(input_ids=ids).logits.float(), dim=-1)
     expected = [all_log_probs[0, 2, 6], all_log_probs[0, 3, 7]]  # token at t+1 predicted at t
-    assert mask.tolist() == [[0, 0, 1, 1]]
-    assert torch.allclose(log_probs[0, 2:], torch.stack(expected), atol=1e-6)
+    assert mask.tolist() == [[1, 1]]
+    assert torch.allclose(log_probs[0], torch.stack(expected), atol=1e-6)
 
 
 def test_padding_does_not_change_a_row(tiny_policy):
+    """A row scored alone or next to a much longer one (heavy left padding) gives the same values."""
     completion = make_completions(1, seed=3)[0]
-    long_neighbour = FakeCompletion([1] * 10, [2] * 10)
+    long_neighbour = FakeCompletion([1] * 20, [2] * 12)
     alone, mask_alone = completion_token_log_probs(tiny_policy, [completion], PAD_TOKEN_ID)
     batched, mask_batched = completion_token_log_probs(tiny_policy, [completion, long_neighbour], PAD_TOKEN_ID)
     n = alone.shape[1]
-    assert torch.equal(mask_batched[0, :n], mask_alone[0]) and mask_batched[0, n:].sum() == 0
-    assert torch.allclose((batched[0, :n] * mask_batched[0, :n]), alone[0] * mask_alone[0], atol=1e-5)
+    assert mask_alone[0].sum() == n == len(completion.completion_ids)
+    assert torch.equal(mask_batched[0, -n:], mask_alone[0]) and mask_batched[0, :-n].sum() == 0
+    assert torch.allclose(batched[0, -n:], alone[0], atol=1e-5)
 
 
 # ---------------------------------------------------------------- loss and gradient
