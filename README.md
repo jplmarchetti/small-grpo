@@ -2,7 +2,7 @@
 
 When GRPO is applied to a base language model on math problems, its benchmark score rises quickly. Part of that gain may only be the model learning to **write the answer where the grader looks for it**, not **answering more problems correctly**. This project measures how much is each.
 
-**Status (2026-11-13):** checkpoints 1–5 done: frozen splits, prompt and graders (tag `grader-v1`), cell rewards and GRPO core, statistics, and policy loading / generation / greedy evaluation (all checks pass on the RTX 5070). First look at B0 on 50 validation problems: 6% lenient, 4% strict, 86% format (it answers `FINAL: <n>` without working). Pre-flight (checkpoint 6) is next.
+**Status (2026-11-14):** checkpoints 1–6 done. Pre-flight on validation: B0 zero-shot 9.2% lenient (answers without reasoning), B0-fewshot 49.4%. The go / no-go rule chose zero-shot (sampled p0 11.1% vs 10%, within noise); **every cell trains with the few-shot prompt** by a documented override made before training (METHODOLOGY §13), so R0 uses p0 = 0.384. Full 2×2 on all three seeds. Next: training loop and smoke test.
 
 ## The experiment in short
 

@@ -55,6 +55,17 @@ class TrainingConfig:
 
 
 @dataclass(frozen=True)
+class PreflightConfig:
+    p0_threshold: float
+    fewshot_override: bool | None  # None = follow the go / no-go rule
+    n_sampled_problems: int
+    truncation_alert: float
+    sampling_seed: int
+    n_audit: int
+    audit_seed: int
+
+
+@dataclass(frozen=True)
 class EvaluationConfig:
     batch_size: int  # fixed for every model, so all are evaluated with the same batches
 
@@ -71,6 +82,7 @@ class ExperimentConfig:
     data: DataConfig
     lora: LoraConfig
     training: TrainingConfig
+    preflight: PreflightConfig
     evaluation: EvaluationConfig
     analysis: AnalysisConfig
 
@@ -84,6 +96,7 @@ def load_config(path: Path = BASE_CONFIG_PATH) -> ExperimentConfig:
         data=DataConfig(**raw["data"]),
         lora=LoraConfig(**raw["lora"]),
         training=TrainingConfig(**training),
+        preflight=PreflightConfig(**raw["preflight"]),
         evaluation=EvaluationConfig(**raw["evaluation"]),
         analysis=AnalysisConfig(**raw["analysis"]),
     )
