@@ -11,7 +11,7 @@ import argparse
 from pathlib import Path
 
 from grpo_gsm8k.config import load_config
-from grpo_gsm8k.paths import REPO_ROOT
+from grpo_gsm8k.queue import run_dir
 from grpo_gsm8k.rewards import RewardCell
 from grpo_gsm8k.train import RunSpec, run_training
 
@@ -38,7 +38,7 @@ def main() -> None:
     spec = RunSpec(
         cell=RewardCell(args.cell),
         seed=args.seed,
-        output_dir=args.output_dir or REPO_ROOT / "outputs" / args.cell / f"seed{args.seed}",
+        output_dir=args.output_dir or run_dir(args.cell, args.seed),
         steps=args.steps or config.training.steps,
         learning_rate=learning_rate,
         validate=not args.no_validation,

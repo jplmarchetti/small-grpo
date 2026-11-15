@@ -2,7 +2,7 @@
 
 The GPU PC's copy of the repository has no `.git` folder, so the tags cannot be checked
 there directly. Instead, manifests/frozen.json records the sha256 of every frozen file
-as it is at its tag (`grader-v1`, `config-v1`), and a laptop test checks those hashes
+as it is at its tag (`grader-v1`, `config-v2`), and a laptop test checks those hashes
 against the tagged commits. The final evaluation refuses to run if any file differs.
 """
 
@@ -15,7 +15,7 @@ from grpo_gsm8k.paths import MANIFEST_DIR, REPO_ROOT
 FROZEN_PATH = MANIFEST_DIR / "frozen.json"
 FROZEN_FILES = {
     "grader-v1": ("src/grpo_gsm8k/graders.py",),
-    "config-v1": ("configs/base.yaml", "manifests/preflight.json", "manifests/splits.json", "manifests/revisions.json"),
+    "config-v2": ("configs/base.yaml", "manifests/preflight.json", "manifests/splits.json", "manifests/revisions.json"),
 }
 
 

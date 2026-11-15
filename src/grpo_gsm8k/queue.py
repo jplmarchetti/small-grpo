@@ -12,13 +12,17 @@ import time
 from collections.abc import Callable, Sequence
 from pathlib import Path
 
+from grpo_gsm8k.config import load_config
 from grpo_gsm8k.paths import REPO_ROOT
 
-RUNS_ROOT = REPO_ROOT / "outputs"
+
+def runs_root() -> Path:
+    """outputs/<config_tag>/: runs of different configurations never share a folder."""
+    return REPO_ROOT / "outputs" / load_config().config_tag
 
 
-def run_dir(cell: str, seed: int, root: Path = RUNS_ROOT) -> Path:
-    return root / cell / f"seed{seed}"
+def run_dir(cell: str, seed: int, root: Path | None = None) -> Path:
+    return (root or runs_root()) / cell / f"seed{seed}"
 
 
 def run_is_complete(directory: Path, steps: int) -> bool:
@@ -35,9 +39,10 @@ def run_queue(
     cells: Sequence[str],
     steps: int,
     train: Callable[[str, int], int] = train_in_subprocess,
-    root: Path = RUNS_ROOT,
+    root: Path | None = None,
 ) -> dict[tuple[str, int], str]:
     """Seed by seed, so every finished seed is a complete 2x2. Returns a status per run."""
+    root = root or runs_root()
     status = {}
     for seed in seeds:
         for cell in cells:
