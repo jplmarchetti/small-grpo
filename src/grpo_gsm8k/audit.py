@@ -50,3 +50,28 @@ def grader_agreement(filled_rows: Sequence[dict]) -> tuple[float, list[dict]]:
         raise ValueError(f"human_correct must be 1 or 0; missing for {unfilled[:5]}")
     disagreements = [row for row in filled_rows if row["human_correct"].strip() != row["grader_lenient"]]
     return 1 - len(disagreements) / len(filled_rows), disagreements
+
+
+# ---------------------------------------------------------------- post-training hand-check (§13, 2026-11-16)
+
+
+def pool_seed_rows(rows_by_seed: dict[int, Sequence[dict]]) -> list[dict]:
+    """One list over all seeds, each row's id tagged with its seed (a problem appears once per seed)."""
+    return [
+        {**row, "problem_id": f"{row['problem_id']}/seed{seed}"}
+        for seed in sorted(rows_by_seed)
+        for row in rows_by_seed[seed]
+    ]
+
+
+def draw_format_failure_slice(pooled_rows: Sequence[dict], n: int, seed: int, exclude: Sequence[dict]) -> list[dict]:
+    """The targeted slice: completions without the FINAL line, not already in the uniform sample.
+
+    Picked on purpose from the hard cases, so its agreement rate is reported apart from
+    the uniform one and never pooled with it.
+    """
+    excluded = {row["problem_id"] for row in exclude}
+    candidates = [row for row in pooled_rows if not row["format_ok"] and row["problem_id"] not in excluded]
+    if len(candidates) < n:
+        raise ValueError(f"only {len(candidates)} format failures to draw {n} from")
+    return draw_audit_sample(candidates, n, seed)
