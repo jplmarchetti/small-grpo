@@ -1,0 +1,394 @@
+problem_id,question,gold_answer,completion,human_correct,grader_lenient
+test-00114/seed42,,6," Let's denote the number of photographs Brittany's phone can hold as B. According to the information given, B = 50 * 1800 = 90000.
+
+Since Jamal's phone can hold 6 times more photographs than Brittany's phone, Jamal's phone can hold 6 * B = 6 * 90000 = 540000 photographs.
+
+Brittany's phone can hold 50 times more photographs than the number of birds in Jamal's photograph, so the number of birds in Jamal's photograph is 50 * 1800 = 90000.
+
+Therefore, the number of ducks in Jamal's photograph is 540000 / 90000 = 6.
+
+Final answer: There are 6 ducks in Jamal's photograph of the ducks at the zoo.",1,1
+test-00123/seed42,,50," First, let's calculate how many miles Rosie runs in the first 3 hours at a speed of 10 miles per hour:
+
+10 miles/hour * 3 hours = 30 miles
+
+Now, let's calculate how many miles she runs at a speed of 5 miles per hour for the remaining 4 hours:
+
+5 miles/hour * 4 hours = 20 miles
+
+Now, let's add the miles she ran in the first 3 hours and the last 4 hours:
+
+30 miles + 20 miles = 50 miles
+
+Finally, let's calculate how many miles she can run in 7 hours at a speed of 10 miles per hour:
+
+50 miles / 10 miles/hour = 5 hours
+
+So, Rosie can run 5 miles in 7 hours.",0,0
+test-00141/seed42,,400," Let's denote the number of worker bees as W, the number of baby bees as B, and the number of queens as Q.
+
+According to the information given:
+1. There are twice as many worker bees as baby bees, so W = 2B
+2. There are twice as many babies as queens, so B = 2Q
+
+We also know that the total number of bees is 700, so:
+W + B + Q = 700
+
+Now, let's substitute the expressions for W and B in terms of Q into the total number of bees equation:
+2B + B + Q = 700
+3B + Q = 700
+
+Since B = 2Q, we can substitute B in the equation:
+3(2Q) + Q = 700
+6Q + Q = 700
+7Q = 700
+
+Now, divide both sides by 7 to find the number of queens:
+Q = 700 / 7
+Q = 100
+
+Now that we know there are 100 queens, we can find the number of baby bees:
+B = 2Q
+B = 2 * 100
+B = 200
+
+Finally, we can find the number of worker bees:
+W = 2B
+W = 2 * 200
+W = 400
+
+So, there are 400 worker bees.",1,1
+test-00148/seed42,,30," Let's denote the cost of one adult ticket as A and the cost of one child ticket as C. We know that the cost of admission for an adult is $12 and for a child is $10. Brittany's mom gave the cashier 1 child ticket and 1 adult ticket, so the total cost for the tickets is 1C + 1A.
+
+We also know that Brittany's mom received $8 in change, which means the total cost of the tickets plus the change is $8. So we can write the equation:
+
+1C + 1A + 8 = 12 + 10
+
+Now, we can solve for C and A:
+
+1C + 1A = 12 + 10 - 8
+1C + 1A = 14
+
+Since we don't have the individual costs of C and A, we can't solve for their exact values, but we can express the total cost in terms of C and A. If we had the individual costs, we could solve for C and A and then find the total cost.
+
+However, since we don't have the individual costs, we can't determine the exact number of marbles Brittany's mom gave the cashier. We can only say that the total cost of the tickets is $14, which includes the cost of the adult ticket and the child ticket.",0,0
+test-00361/seed42,,20," The train travels a total of 75 + 100 + (75 + 100) = 350 miles in one trip.
+Since the train goes 3 times a day, it travels 350 * 3 = 1050 miles in one day.
+The train needs service every 18,000 miles, so it needs to travel 1050 / 18,000 = 0.0625 days.
+Since the train travels 3 times a day, it will go between services 3 * 0.0625 = 0.1875 days.
+Since the train travels 3 times a day, it will go between services 3 * 0.1875 = 0.5625 days.
+Since the train travels 3 times a day, it will go between services 3 * 0.5625 = 1.6875 days.
+Since the train travels 3 times a day, it will go between services 3 * 1.6875 = 5.0625 days.
+Since the train travels 3 times a day, it will go between services 3 * 5.0625 = 15.1875 days.
+Since the train travels 3 times a day, it will go between services 3 * 15.1875 = 45.5625 days.
+Since the train travels 3 times a day, it will go between services 3 * 45.5625 = 136.6875 days.
+Since the train travels 3 times a day, it will go between services 3 * 136.6875 = 400.0625 days.
+Since the train travels 3 times a day, it will go between services 3 * 400.0625 = 1200.1875 days.
+Since the train travels 3 times a day, it will go between services 3 * 1200.1875 = 3600.5714 days.
+Since the train travels 3 times a day, it will go between services 3 * 3600.5714 = 10801",0,0
+test-00394/seed42,,92," First, we need to find out how many books Wendy wants to place in the shelving system. Since she wants to place 20 more than double the number of books in a 6x6 grid, we can calculate this as follows:
+
+Double the number of books = 2 * 20 = 40
+20 more than double the number of books = 40 + 20 = 60
+
+Now, we need to find out how many books are in each row and column of the grid. Since there are 6 rows and 6 columns, we can divide the total number of books by the number of rows and columns to find out how many books are in each row and column:
+
+60 books / 6 rows = 10 books per row
+60 books / 6 columns = 10 books per column
+
+Now, we can calculate the total number of books in the grid by multiplying the number of books per row and column by the number of rows and columns:
+
+Total books = 10 books per row * 6 rows + 10 books per column * 6 columns
+Total books = 60 + 60
+Total books = 120
+
+Since Wendy wants to place 20 more than double the number of books in the grid, we can calculate the total number of books she needs to carry:
+
+Total books needed = 20 more than double the number of books
+Total books needed = 20 + 2 * 120
+Total books needed = 20 + 240
+Total books needed = 260
+
+Therefore, Wendy will need to carry 260 books to complete her task.",0,0
+test-00428/seed42,,26," First, we need to determine how many hotdogs were prepared for the guests. Since half of the 36 guests were able to have two hotdogs, we calculate:
+
+36 guests * 0.5 = 18 guests
+
+This means that 18 guests were able to have two hotdogs each, which totals:
+
+18 guests * 2 hotdogs/guest = 36 hotdogs
+
+However, 40 guests showed up, and everyone wanted a second hotdog. So, the number of hotdogs prepared for the 40 guests is:
+
+40 guests * 1 hotdog/guest = 40 hotdogs
+
+Now, we need to find out how many hotdogs were left after the 36 hotdogs were prepared:
+
+36 hotdogs - 40 hotdogs = -4 hotdogs
+
+Since we cannot have a negative number of hotdogs, it means that the caterer did not have enough hotdogs to prepare all the guests. Therefore, the caterer cannot prepare 36 hotdogs for 36 guests, as it is not possible to have a negative number of hotdogs.",0,0
+test-00471/seed42,,80," First, let's find out how many pencils were used in the first two months. Since 1/5 of the total pencils were used, we calculate:
+
+1/5 * 30 students * 10 pencils/student = 60 pencils
+
+Now, let's find out how many pencils were left after the first two months:
+
+30 students * 10 pencils/student - 60 pencils = 300 pencils - 60 pencils = 240 pencils
+
+At the end of the year, only 1/3 of the remaining pencils were left. So, we calculate:
+
+1/3 * 240 pencils = 80 pencils
+
+Therefore, there were 80 pencils left at the end of the year.",1,1
+test-00590/seed42,,319," First, let's calculate the number of people Alex invites via email. She invites 100 people, and each of these invites 2 friends, so:
+
+100 people * 2 friends/person = 200 friends
+
+Now, let's add the 10 friends who are invited to the email invitations:
+
+200 friends + 10 friends = 210 friends
+
+Next, let's calculate the number of people Alex invites via email and calls her friends:
+
+210 friends * 2 friends/person = 420 friends
+
+Now, let's add the 8 friends who are invited to the call invitations:
+
+420 friends + 8 friends = 428 friends
+
+Finally, let's add the 8 people who are bringing their spouses:
+
+428 friends + 8 spouses = 436 people
+
+Now, let's add the 100 people who are invited to the event:
+
+100 people + 436 people = 536 people
+
+Since each seat is for 2 people, we can calculate the number of seats needed by dividing the total number of people by 2:
+
+536 people / 2 people/seat = 268 seats
+
+Therefore, Alex will need 268 seats.",0,0
+test-00836/seed42,,140," First, we need to determine how many clay dishes Jada, Rory, and Kora made. We know that Kora made 20 clay dishes. Since Rory made 20 more clay dishes than Kora, Rory made 20 + 20 = 40 clay dishes. 
+
+Now, we can calculate the total number of clay dishes made by Jada, Rory, and Kora:
+Jada made 20 dishes.
+Rory made 40 dishes.
+Kora made 20 dishes.
+
+Total clay dishes made = Jada's dishes + Rory's dishes + Kora's dishes
+Total clay dishes made = 20 + 40 + 20
+Total clay dishes made = 80
+
+So, Jada, Rory, and Kora made a total of 80 clay dishes together.",0,0
+test-00927/seed42,,85000," First, we need to find the total number of calories in the mini cinnamon rolls and mini blueberry muffins.
+
+For the mini cinnamon rolls:
+200 mini cinnamon rolls * 600 calories per mini cinnamon roll = 120,000 calories
+
+For the mini blueberry muffins:
+300 mini blueberry muffins * 450 calories per mini blueberry muffin = 135,000 calories
+
+Now, we need to find the total number of calories in all the mini pastries:
+120,000 calories (cinnamon rolls) + 135,000 calories (blueberry muffins) = 255,000 calories
+
+Since a mini pastry has 1/3rd of the calories of a normal version, we need to find out how many mini pastries are in the total number of calories.
+
+255,000 calories / (1/3) calories per mini pastry = 255,000 * 3 = 765,000 mini pastries
+
+Now, we need to find out how many mini pastries Andrew has:
+765,000 mini pastries / 200 mini cinnamon rolls = 3,825 mini pastries
+
+Since each mini pastry has 1/3rd of the calories of a normal version, we need to find out how many mini pastries Andrew has:
+3,825 mini pastries * (1/3) calories per mini pastry = 3,825 / 3 = 1,275 mini pastries
+
+Since each mini pastry has 1/3rd of the calories of a normal version, we need to find out how many mini pastries Andrew has:
+1,275 mini pastries * (1/3) calories per mini pastry = 1,275 / 3 = 425 mini pastries
+
+Since each mini pastry has 1/3rd of the calories of a normal version, we need to find out how many mini pastries Andrew has:
+425 mini pastries * (1/3) calories per mini pastry = 425 / 3 = 141.67 mini pastries
+
+Since we can't have a fraction of a mini pastry, we'll round down to the nearest whole number. Andrew has 141 mini pastries",0,0
+test-00939/seed42,,650," In the first ten rounds, Craig has spelled out 20 words with 15 letters each, so he has spelled out a total of 20 * 15 = 300 letters.
+In the next ten rounds, Craig's brother has spelled out words with a total count of letters 50 more than Craig, so his brother has spelled out 20 + 50 = 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In the next ten rounds, Craig's brother has spelled out 70 letters.
+In",0,0
+test-00982/seed42,,12," First, we need to find out how many students are football players. Since 20% of the class are football players, we calculate:
+
+20% of 30 students = 0.20 * 30 = 6 students
+
+So, there are 30 - 6 = 24 students remaining in the class.
+
+Out of these remaining students, 25% are cheerleaders or part of band. To find out how many cheerleaders or part of band there are, we calculate:
+
+25% of 24 students = 0.25 * 24 = 6 students
+
+Now, we add the number of football players and cheerleaders or part of band to find out how many students are in the class:
+
+6 football players + 6 cheerleaders or part of band = 12 students
+
+These 12 students are the ones who will need to leave early. Since there are 30 students in total, we can find out how many students are leaving by subtracting the number of students in the class from the total number of students:
+
+30 students - 12 students = 18 students
+
+Therefore, 18 students are leaving early.",0,0
+test-01019/seed42,,98," First, let's find out how many guests checked in for each type of checkout:
+
+Early checkout: 24 guests
+Late checkout: 15 guests
+Late checkout: 2 * 15 = 30 guests
+
+Now, let's find out how many guests checked in for the afternoon:
+
+Late checkout: 30 guests
+7 more people checked in after dinner: 30 + 7 = 37 guests
+
+Now, let's find out how many guests checked in for the afternoon and evening:
+
+Late checkout: 30 guests
+7 more people checked in after dinner: 37 guests
+
+Total guests checked in for the afternoon and evening: 30 + 37 = 67 guests
+
+Now, let's find out the total number of guests:
+
+100 guests (initial) + 67 guests (afternoon and evening) = 167 guests
+
+The hotel now has 167 guests.",0,0
+test-01130/seed42,,25," First, let's find out how many groups of 8 crayons can be made from 200 crayons. 200 crayons / 8 crayons per group = 25 groups
+
+Since each box weighs 8 ounces, we need to find out how many boxes are needed to hold all 25 groups. 25 groups / 8 ounces per box = 3.125 boxes
+
+Since you can't have a fraction of a box, we'll round up to the nearest whole number, which is 4 boxes.
+
+Each box weighs 8 ounces, so the total weight of the crayons and boxes is 4 boxes * 8 ounces per box = 32 ounces.
+
+To convert ounces to pounds, we divide by 16 (since there are 16 ounces in a pound). 32 ounces / 16 ounces per pound = 2 pounds
+
+So, the total weight of the crayons and the boxes is 2 pounds.",0,0
+test-00703/seed43,,50," Let's denote the number of dumplings each female ate as F. Since there are 6 females, the total number of dumplings eaten by the females is 6F.
+
+Each male ate 1 more dumpling than each female, so each male ate F + 1 dumplings.
+
+Since there are 8 males, the total number of dumplings eaten by the males is 8(F + 1).
+
+The total number of dumplings eaten by all the males and females is the sum of the dumplings eaten by each group:
+
+8(F + 1) + 6F = 8F + 8 + 6F = 14F + 8
+
+We know that the total number of dumplings eaten is 100, so we can set up the equation:
+
+14F + 8 = 100
+
+Now, let's solve for F:
+
+14F = 100 - 8
+14F = 92
+F = 92 / 14
+F = 6.5714
+
+Since the number of dumplings eaten by each female must be a whole number, we can round F to the nearest whole number, which is 7.
+
+Now we can calculate the total number of dumplings eaten by the males:
+
+8(F + 1) = 8(7 + 1) = 8(8) = 64
+
+So, the total number of dumplings eaten by all the males and females is 64 + 6 = 70.
+
+Since Larry has 90 marbles and he has lost 1 game, he must have lost 1 game because 90 - 70 = 20, and 20 is not enough to cover the 10 marbles lost by his friend.
+
+Final answer: Larry has lost 1 game.",0,0
+test-00745/seed43,,1100," First, let's calculate the total cost of the packs of magic cards:
+3 packs * $1800 per pack = $5400
+
+Next, let's calculate the total value of the cards he bought:
+1 card * $4000 = $4000
+1 card * $1000 = $1000
+30 cards * $50 per card = $1500
+
+Now, let's add up the total value of the cards:
+$4000 + $1000 + $1500 = $6500
+
+Finally, let's calculate the profit:
+Total cost of packs - Total value of cards = Profit
+$5400 - $6500 = -$1100
+
+Since the profit is negative, it means Mark lost $1100.",1,1
+test-00141/seed44,,400," Let's denote the number of worker bees as W, the number of baby bees as B, and the number of queens as Q.
+According to the problem, we have the following relationships:
+W = 2B (twice as many worker bees as baby bees)
+B = 2Q (twice as many babies as queens)
+We also know that the total number of bees is 700, so we can write the equation:
+W + B + Q = 700
+Substituting the first two equations into the third equation, we get:
+2B + B + Q = 700
+Combining like terms, we get:
+3B + Q = 700
+Since we don't have any information about the number of queens, we can't determine the exact number of worker bees. However, we can express the number of worker bees in terms of the number of baby bees:
+W = 2B
+Therefore, the number of worker bees is 2 times the number of baby bees, which is 2 times the number of baby bees. We can express the number of worker bees as:
+W = 2B
+Since we don't have any information about the number of baby bees, we can't determine the exact number of worker bees. However, we can express the number of worker bees in terms of the number of baby bees:
+W = 2B
+Therefore, the number of worker bees is 2 times the number of baby bees, which is 2 times the number of baby bees. We can express the number of worker bees as:
+W = 2B
+Since we don't have any information about the number of baby bees, we can't determine the exact number of worker bees. However, we can express the number of worker bees in terms of the number of baby bees:
+W = 2B
+Therefore, the number of worker bees is 2 times the number of baby bees, which is 2 times the number of baby bees. We can express the number of worker bees as:
+W = 2B
+Since we don't have any information about the number of baby bees, we can't determine the exact number of worker bees. However, we can express the number of worker bees in terms of the number of baby bees:
+W = 2B
+Therefore, the number of worker bees is 2 times the number of baby bees, which is 2 times the number of baby bees. We can express the number of worker",0,0
+test-00757/seed44,,75," First, let's determine the number of students for each size:
+
+1. Extra-small: 11 students
+2. Size small: Twice as many as extra-small, so 11 * 2 = 22 students
+3. Size medium: Four less than the number of size small students, so 22 - 4 = 18 students
+4. Size large: Half as many as size medium, so 18 / 2 = 9 students
+5. Size extra-large: Six more than the number of size large students, so 9 + 6 = 15 students
+
+Now, let's add up the total number of students:
+
+11 (extra-small) + 22 (small) + 18 (medium) + 9 (large) + 15 (extra-large) = 75 students
+
+Krissa needs to order 75 shirts for her preschool students.",1,1
+test-01103/seed44,,90," Let's denote the total number of jellyfish in the tank as J.
+According to the problem, a fifth of the jellyfish are large, so the number of large jellyfish is (1/5)J.
+A third of the large jellyfish change color from green to blue under UV light, so the number of jellyfish that change color is (1/3) * (1/5)J = (1/15)J.
+The remaining jellyfish are small and always stay blue, so the number of small jellyfish is J - (1/15)J = (14/15)J.
+We are told that when a UV light turned on, 6 jellyfish changed color, so the number of jellyfish that are now blue is 6.
+Therefore, the number of jellyfish that are now blue is (14/15)J - 6.
+Since the number of jellyfish that are now blue is equal to the number of small jellyfish, we can set up the equation:
+(14/15)J - 6 = (14/15)J
+Subtracting (14/15)J from both sides, we get:
+-6 = -6
+This equation is true for any value of J, so it doesn't give us any new information.
+However, we know that the number of small jellyfish is (14/15)J, and we are told that the number of small jellyfish is 6.
+Therefore, the total number of jellyfish in the tank is 6 + (14/15)J.
+Since we don't have a specific value for J, we cannot determine the exact number of jellyfish in the tank.
+FINAL: 6 + (14/15)J
+",0,0

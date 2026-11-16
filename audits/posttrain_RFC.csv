@@ -1,0 +1,146 @@
+problem_id,question,gold_answer,completion,human_correct,grader_lenient
+test-00102/seed42,,26," John drinks 1 glass of water with breakfast, 1 glass with lunch, and 1 glass with dinner, which totals to 3 glasses of water per day.
+Since there are 5 weekdays in a week, John drinks 3 glasses/day * 5 days/week = 15 glasses of water in a week.
+On the weekends, John drinks a soda with dinner, which is 1 glass of water.
+So, John drinks 15 glasses of water + 1 glass of water = 16 glasses of water in a week.
+FINAL: 16
+",0,0
+test-00108/seed42,,50," Let's assume Henry baked x cookies last year.
+He wants to make twice as many as he did last year, so he wants to make 2x cookies.
+When he finished baking, he realized he actually baked 15 more cookies than he meant to, so he baked 2x + 15 cookies.
+He dropped 5 cookies, so he has 2x + 15 - 5 = 2x + 10 cookies left.
+He now has a total of 110 cookies, so 2x + 10 = 110.
+Subtracting 10 from both sides, we get 2x = 100.
+Dividing both sides by 2, we get x = 50.
+Henry baked 50 cookies last year.
+FINAL: 50
+",1,1
+test-00122/seed42,,48," On Monday, Sadie slept 8 hours.
+For the next two days, she slept 2 hours less than Monday, so she slept 8 - 2 = 6 hours each day.
+So, for the next two days, she slept 6 hours/day x 2 days = 12 hours.
+The rest of the week she slept 1 hour more than those two days, so she slept 6 hours + 1 hour = 7 hours each day.
+So, for the rest of the week, she slept 7 hours/day x 7 days = 49 hours.
+Therefore, Sadie slept a total of 8 hours + 12 hours + 49 hours = 69 hours throughout the week.
+FINAL: 69
+",0,0
+test-00130/seed42,,30," A third of the 60 elves quit, so 60 / 3 = 20 elves quit.
+After 20 elves quit, there are 60 - 20 = 40 elves left.
+Then, 10 of the remaining elves quit, so there are 40 - 10 = 30 elves left.
+FINAL: 30
+",1,1
+test-00356/seed42,,21," Dean spent 6 toy cars x $2 = $12 on toy cars.
+Dean spent 5 teddy bears x $1 = $5 on teddy bears.
+In total, Dean spent $12 + $5 = $17 on toys.
+Dean's mother gave him an extra $10, so he now has $28 + $10 = $38.
+Dean has $38 - $17 = $21 left.
+FINAL: 21
+",1,1
+test-00383/seed42,,2," First, we need to determine the total number of cups of lemonade that Millie can make with the supplies she bought. Since each pitcher holds 12 cups and she has 3 pitchers, the total number of cups is 12 cups/pitcher * 3 pitchers = 36 cups.
+Next, we need to determine how many cups of lemonade she sells per hour. Since she sells an average of 4 cups per hour, she sells 4 cups/hour * 60 minutes/hour = 240 cups/hour.
+Now, we can calculate the profit per hour. Since each cup of lemonade is sold for $1, the profit per hour is 240 cups/hour * $1/cup = $240/hour.
+FINAL: $240
+",0,0
+test-00419/seed42,,3000," Oliver needs to climb 4,000 feet to reach the elevation of Stanley's comb.
+FINAL: 4000
+",0,0
+test-00456/seed42,,78," The number of green cards is 15 + (15 * 0.6) = 15 + 9 = 24
+The sum of red and green cards is 15 + 24 = 39
+The number of yellow cards is 39 - 15 = 24
+FINAL: 24
+",0,0
+test-00571/seed42,,308," The cost of spaying the kitten is $200.
+The cost of the 3 vaccines is $20 each, so $20 x 3 = $60.
+The cost of the 4 broken vases is $12 each, so $12 x 4 = $48.
+The total cost of the kitten so far is $200 + $60 + $48 = $308.
+FINAL: 308
+",1,1
+test-00895/seed42,,74," Carl’s weight is 55 kg + 16 kg = 71 kg.
+Christian’s weight is 71 kg + 8 kg = 79 kg.
+Harry’s weight is 79 kg - 5 kg = 74 kg.
+FINAL: 74
+",1,1
+test-00914/seed42,,3," Jon drives 100 miles a day for a 30 day month, so he drives a total of 100 * 30 = 3000 miles.
+Since his car needs a tune-up every 1000 miles, he needs 3000 / 1000 = 3 tune-ups.
+FINAL: 3
+",1,1
+test-00952/seed42,,360," Vince stapled reports for 11:00 PM - 8:00 AM = 5 hours.
+Since he stapled 30 reports every 15 minutes, he stapled 30 / 15 = 2 reports per hour.
+Therefore, he stapled 2 reports per hour for 5 hours, which is 2 * 5 = 10 reports.
+FINAL: 10
+",0,0
+test-01003/seed42,,480," The cost to rent the studio per session is $25 + $1.50 x 10 students = $25 + $15 = $40 per session.
+The studio is rented 3 days a week, so the weekly rental cost is $40 x 3 = $120.
+In a month, there are 4 weeks, so the monthly rental cost is $120 x 4 = $480.
+The expected earnings of the dance studio in a month is $480.
+FINAL: 480
+",1,1
+test-01126/seed42,,50," The distance Alfie flies in one day is 400 kilometers.
+Half of the way around the earth is 400 kilometers / 2 = 200 kilometers.
+To find out how many days it will take Alfie to fly 200 kilometers, we divide the distance by the distance he flies each day: 200 kilometers / 400 kilometers per day = 0.5 days.
+FINAL: 0.5
+",0,0
+test-00409/seed43,,168000," In May, the company hired 40 employees and each employee worked 40 hours per week, so the total number of hours worked in May is 40 * 40 = 1600 hours.
+The total amount of money paid to the employees in May is 1600 * $15 = $24000.
+In June, 1/4 of the employees' contracts expired, so the number of employees who had contracts expired is 40 * 1/4 = 10 employees.
+The total number of hours worked in June is 10 * 40 = 400 hours.
+The total amount of money paid to the employees in June is 400 * $15 = $6000.
+The total amount of money paid to the employees in the two months is $24000 + $6000 = $30000.
+FINAL: 30000
+",0,0
+test-00750/seed43,,4000," In one week, Candy rents out 60 chairs/day * 5 days/week = 300 chairs.
+In two weeks, Candy rents out 300 chairs/week * 2 weeks = 600 chairs.
+In one month, Candy rents out 600 chairs.
+In two 4-week months, Candy rents out 600 chairs/4 weeks * 2 months = 1200 chairs.
+FINAL: 1200
+",0,0
+test-00914/seed43,,3," Jon drives 100 miles a day for a 30 day month, so he drives 100 * 30 = 3000 miles in that time.
+Since his car needs a tune-up every 1000 miles, he needs 3000 / 1000 = 3 tune-ups.
+FINAL: 3
+",1,1
+test-01099/seed43,,2," To find out how much longer it takes to ride the biggest slide compared to the second biggest slide, we need to calculate the time it takes to slide down each slide and then find the difference.
+For the biggest slide, it takes 300 feet / 60 feet/minute = 5 minutes to slide down.
+For the second biggest slide, it takes 240 feet / 80 feet/minute = 3 minutes to slide down.
+To find the difference in time, we subtract the time for the second biggest slide from the time for the biggest slide: 5 minutes - 3 minutes = 2 minutes.
+FINAL: 2
+",1,1
+test-01146/seed43,,16," Adam has $100 to spend on rocks and sell them.
+He can buy 100 / 5 = 20 rocks.
+He sells 20 / 2 = 10 rocks.
+He loses 10 * 7 = $70.
+FINAL: 70
+",0,0
+test-01300/seed43,,120," Josh services 3 cars a day, so in a week, he services 3 cars/day * 5 days/week = 15 cars.
+In a week, he services 15 cars * 5 days/week = 75 cars.
+In 2 weeks, he services 75 cars/week * 2 weeks = 150 cars.
+He gets paid $4 per car, so he makes 150 cars * $4/car = $600.
+FINAL: 600
+",0,0
+test-00133/seed44,,13," On Monday, Walt walked 4 miles.
+On Tuesday, he walked 6 times as many miles as he walked on Monday, so he walked 6 * 4 = 24 miles.
+His total mileage Monday through Wednesday was 4 + 24 + 41 = 69 miles.
+Therefore, Walt walked 69 - 41 = 28 miles on Wednesday.
+FINAL: 28
+",0,0
+test-00378/seed44,,15," Lindsay has washed 10 pairs of socks, which is 10 x 2 = 20 socks.
+She also has 15 loose socks.
+So, the total number of socks she has washed is 20 + 15 = 35 socks.
+Therefore, Lindsay has missed 50 - 35 = 15 socks.
+FINAL: 15
+",1,1
+test-00395/seed44,,38," Erica's dad brought her 2 boxes of pre-made cards, each with 15 cards, so she had 2 * 15 = 30 cards.
+She made 20 cards and received 17 from family and friends, so she had 20 + 17 = 37 cards.
+She passed out 24 cards to her classmates and 5 cards to her family, so she had 37 - 24 - 5 = 8 cards left.
+She received 17 cards from family and friends, so she now has 8 + 17 = 25 cards.
+FINAL: 25
+",0,0
+test-00399/seed44,,12," Beth is 5 years older than Erica, so Beth is 30 + 5 = 35 years old.
+Alice is 7 years older than Beth, so Alice is 35 + 7 = 42 years old.
+The difference between the ages of Alice and Erica is 42 - 30 = 12 years.
+FINAL: 12
+",1,1
+test-01016/seed44,,138," The price of carrots increases by 5% of the original price every year, so after one year, the price would be $120 + ($120 * 0.05) = $120 + $6 = $126.
+After two years, the price would be $126 + ($126 * 0.05) = $126 + $6.30 = $132.30.
+After three years, the price would be $132.30 + ($132.30 * 0.05) = $132.30 + $6.615 = $138.915.
+Rounded to the nearest integer, the price of carrots after three years would be $139.
+FINAL: 139
+",0,0

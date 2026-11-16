@@ -1,0 +1,240 @@
+problem_id,question,gold_answer,completion,human_correct,grader_lenient
+test-00102/seed42,,26," John drinks 1 glass of water with breakfast, 1 glass of water with lunch, and 1 glass of water with dinner, which totals to 3 glasses of water per day.
+Since there are 5 weekdays in a week, John drinks 3 glasses of water x 5 days = 15 glasses of water in a week.
+On the weekends, John drinks a soda with dinner, which is 1 glass of water.
+So, in a week, John drinks 15 glasses of water + 1 glass of water = 16 glasses of water.
+FINAL: 16
+",0,0
+test-00108/seed42,,50," Let's denote the number of cookies Henry baked last year as x. According to the problem, he wants to make twice as many as he did last year, so he plans to bake 2x cookies.
+
+When he finishes baking, he realizes he actually baked 15 more cookies than he meant to, so he actually baked 2x + 15 cookies.
+
+He drops 5 cookies as he is putting them out to cool, so the total number of cookies he has now is 110.
+
+So, we can write the equation:
+
+2x + 15 - 5 = 110
+
+Simplifying the equation:
+
+2x + 10 = 110
+
+Subtract 10 from both sides:
+
+2x = 100
+
+Divide both sides by 2:
+
+x = 50
+
+Henry baked 50 cookies last year.",1,1
+test-00122/seed42,,48," On Monday, Sadie slept 8 hours.
+For the next two days, she slept 2 hours less than Monday, so she slept 8 - 2 = 6 hours each day.
+For the next two days, she slept 6 hours each day, so she slept a total of 6 * 2 = 12 hours.
+In the remaining 5 days of the week, she slept 1 hour more than the previous two days, so she slept 6 + 1 = 7 hours each day.
+For the remaining 5 days, she slept 7 hours each day, so she slept a total of 7 * 5 = 35 hours.
+In total, Sadie slept 8 + 12 + 35 = 55 hours throughout the week.
+FINAL: 55
+",0,0
+test-00130/seed42,,30," First, we need to find out how many elves quit after children vomit on them. Since a third of the elves quit, we calculate:
+
+60 elves * (1/3) = 20 elves quit.
+
+Now, we subtract the number of elves who quit from the total number of elves to find out how many are left:
+
+60 elves - 20 elves = 40 elves.
+
+Next, we need to find out how many of the remaining elves quit after kids kick their shins. Since 10 of the remaining elves quit, we subtract:
+
+40 elves - 10 elves = 30 elves.
+
+So, there are 30 elves left after the kids kick their shins.",1,1
+test-00356/seed42,,21," First, let's calculate the total cost of the toy cars and teddy bears Dean bought:
+
+6 toy cars * $2 each = $12
+5 teddy bears * $1 each = $5
+
+Total cost = $12 + $5 = $17
+
+Dean's mother gave him $28, so the remaining money is:
+
+$28 - $17 = $11
+
+Dean's mother then gives him an extra $10, so the total amount of money he has left is:
+
+$11 + $10 = $21
+
+Final answer: Dean has $21 left.",1,1
+test-00383/seed42,,2," First, let's calculate the total number of cups of lemonade Millie can make with the supplies she bought. Since each pitcher holds 12 cups and she has 3 pitchers, she can make 3 pitchers x 12 cups = 36 cups of lemonade.
+
+Next, we need to determine how many cups she sells per hour. Since she sells an average of 4 cups per hour, she will sell 36 cups / 4 cups per hour = 9 cups per hour.
+
+Now, let's calculate the total revenue from selling the lemonade. Since each cup is sold for $1, she will make 9 cups x $1 = $9 per hour.
+
+Finally, to find the profit, we subtract the cost of the supplies from the revenue. The cost of the supplies is $18, so the profit is $9 - $18 = -$9.
+
+Since the profit is negative, it means that Millie is incurring a loss of $9 per hour.",0,0
+test-00419/seed42,,3000," To determine how many feet Oliver must climb to reach the elevation of Stanley's comb, we need to consider the following:
+
+1. Stanley's comb was initially at an elevation of 10,000 feet.
+2. The comb fell 4,000 feet to a ledge below.
+3. Oliver is at an elevation of 3,000 feet.
+
+First, we calculate the total distance Stanley's comb fell:
+\[ 10,000 \text{ feet} - 4,000 \text{ feet} = 6,000 \text{ feet} \]
+
+Next, we need to determine how many feet Oliver must climb to reach the same elevation as Stanley's comb. Since Oliver is at an elevation of 3,000 feet, we subtract the distance he has already climbed from the elevation of Stanley's comb:
+\[ 6,000 \text{ feet} - 3,000 \text{ feet} = 3,000 \text{ feet} \]
+
+Therefore, Oliver must climb \(\boxed{3000}\) feet to reach the elevation of Stanley's comb.",1,1
+test-00456/seed42,,78," First, we need to find out how many more green cards there are compared to the red cards. Since there are 15 red cards and 60% more green cards, we calculate the number of green cards as follows:
+
+60% of 15 red cards = 0.60 * 15 = 9 green cards
+
+Now, we add the number of red and green cards to find the total number of green cards:
+
+15 red cards + 9 green cards = 24 green cards
+
+Next, we need to find the total number of cards in the set. We know there are 15 red cards and 24 green cards, so the total number of cards is:
+
+15 red cards + 24 green cards = 39 cards
+
+Finally, we need to find out how many yellow cards there are. Since the yellow cards are as many as the sum of the red and green cards, we add the number of red and green cards:
+
+15 red cards + 24 green cards = 39 yellow cards
+
+Now, we can find the total number of cards by adding the number of red, green, and yellow cards:
+
+39 red cards + 24 green cards + 39 yellow cards = 92 cards
+
+So, there are 92 cards in total.",0,0
+test-00571/seed42,,308," The cost of spaying the kitten is $200.
+The cost of the 3 vaccines is $20 each, so $20 x 3 = $60.
+The cost of the 4 broken vases is $12 each, so $12 x 4 = $48.
+The total cost of the kitten so far is $200 + $60 + $48 = $308.
+FINAL: 308
+",1,1
+test-00895/seed42,,74," Martin's weight is 55 kg.
+Carl's weight is 16 kg more than Martin's weight, so Carl's weight is 55 + 16 = 71 kg.
+Christian's weight is 8 kg more than Carl's weight, so Christian's weight is 71 + 8 = 79 kg.
+Harry is 5 kg less than Christian's weight, so Harry's weight is 79 - 5 = 74 kg.
+FINAL: 74
+",1,1
+test-00914/seed42,,3," Jon drives 100 miles a day for a 30 day month, so he drives a total of 100 * 30 = 3000 miles in that time.
+Since his car needs a tune-up every 1000 miles, he needs 3000 / 1000 = 3 tune-ups.
+FINAL: 3
+",1,1
+test-00952/seed42,,360," Vince can staple 30 reports every 15 minutes, so in one hour (60 minutes), he can staple 30/15 = 2 reports.
+In 11:00 PM, he has been stapling for 11:00 PM - 8:00 AM = 3 hours.
+In 3 hours, he can staple 2 reports/hour * 3 hours = 6 reports.
+In total, Vince stapled 6 reports + 30 reports = 36 reports.
+FINAL: 36
+",0,0
+test-01003/seed42,,480," First, let's calculate the total cost of renting the studio for one day:
+
+Cost per session = $25
+Number of sessions per day = 10 students
+Total cost for one day = $25 * 10 = $250
+
+Now, let's calculate the total cost for renting the studio for 3 days:
+
+Total cost for 3 days = $250 * 3 = $750
+
+Next, let's calculate the total number of students the studio is rented for in a month:
+
+Number of days in a month = 3 days
+Number of students per day = 10 students
+Total number of students in a month = 3 * 10 = 30 students
+
+Now, let's calculate the total earnings for the month:
+
+Total earnings = Total cost for 3 days * Total number of students in a month
+Total earnings = $750 * 30 = $22,500
+
+So, the expected earnings of the dance studio in a month are $22,500.",0,0
+test-01126/seed42,,50," To find out how many days it will take Alfie to fly a distance equal to half of the way around the earth, we first need to find out how far the half-way point is. Half of the way around the earth is 40,000 kilometers / 2 = 20,000 kilometers.
+Now, we need to find out how many days it will take Alfie to fly 20,000 kilometers. Since Alfie flies 400 kilometers every day, we can divide the distance by the daily distance to find the number of days it will take.
+20,000 kilometers / 400 kilometers per day = 50 days
+FINAL: 50
+",1,1
+test-00409/seed43,,168000," In May, the company hired 40 employees and each employee worked 40 hours per week, so the total number of hours worked in May is 40 employees * 40 hours/employee = 1600 hours.
+The total amount of money paid to the employees in May is 1600 hours * $15/hour = $24,000.
+In June, 1/4 of the employees' contracts expired, so the number of employees who had contracts expired is 40 employees * 1/4 = 10 employees.
+The total number of hours worked in June is 10 employees * 40 hours/employee = 400 hours.
+The total amount of money paid to the employees in June is 400 hours * $15/hour = $6,000.
+The total amount of money paid to the employees in the two months is $24,000 + $6,000 = $30,000.
+FINAL: $30,000
+",0,0
+test-00750/seed43,,4000," In one week, Candy rents out 60 chairs/day * 5 days/week = 300 chairs.
+In two weeks, Candy rents out 300 chairs/week * 2 weeks = 600 chairs.
+In one month, Candy rents out 600 chairs.
+In two 4-week months, Candy rents out 600 chairs/4 weeks * 2 months = 1200 chairs.
+FINAL: 1200
+",0,0
+test-00914/seed43,,3," Jon drives 100 miles a day for a 30 day month, so he drives a total of 100 * 30 = 3000 miles in that time.
+Since his car needs a tune-up every 1000 miles, he needs 3000 / 1000 = 3 tune-ups.
+FINAL: 3
+",1,1
+test-01099/seed43,,2," To find out how much longer it takes to ride the biggest slide compared to the second biggest slide, we need to calculate the time it takes to slide down each slide and then find the difference.
+
+For the biggest slide:
+Time = Distance / Speed
+Time = 300 feet / 60 feet/minute
+Time = 5 minutes
+
+For the second biggest slide:
+Time = 240 feet / 80 feet/minute
+Time = 3 minutes
+
+Now, we find the difference in time:
+Difference = Time for biggest slide - Time for second biggest slide
+Difference = 5 minutes - 3 minutes
+Difference = 2 minutes
+
+It takes 2 minutes longer to ride the biggest slide compared to the second biggest slide.
+FINAL: 2
+",1,1
+test-01146/seed43,,16," Adam has $100 to spend on rocks and sell them.
+He can buy 100 / 5 = 20 rocks.
+He sells 20 * $7 = $140 worth of rocks.
+He invests all his money in the rock stand, so he has $100 - $140 = -$40.
+He only sells 60% of his inventory, so he sells 60/100 * $140 = $84 worth of rocks.
+He loses $140 - $84 = $56.
+FINAL: 56
+",0,0
+test-01300/seed43,,120," Josh services 3 cars a day, so in a week, he services 3 cars/day * 5 days/week = 15 cars/week.
+In 2 weeks, he services 15 cars/week * 2 weeks = 30 cars.
+He gets paid $4 per car, so in 2 weeks, he makes 30 cars * $4/car = $120.
+FINAL: $120
+",1,1
+test-00133/seed44,,13," On Monday, Walt walked 4 miles.
+On Tuesday, he walked 6 times as many miles as he walked on Monday, so he walked 6 * 4 = 24 miles.
+His total mileage for Monday through Wednesday was 4 + 24 + 41 = 69 miles.
+Therefore, Walt walked 69 - 41 = 28 miles on Wednesday.
+FINAL: 28
+",0,0
+test-00378/seed44,,15," Lindsay has washed 10 pairs of socks, which is 10 x 2 = 20 socks.
+She also has 15 loose socks.
+So, the total number of socks she has washed is 20 + 15 = 35 socks.
+Therefore, Lindsay has missed 50 - 35 = 15 socks.
+FINAL: 15
+",1,1
+test-00395/seed44,,38," Erica made 20 cards.
+Her dad brought her 2 boxes of pre-made cards, each with 15 cards, so she received 2 * 15 = 30 cards from her dad.
+She passed out 24 cards to her classmates, 5 cards to her family, and received 17 cards from her friends.
+So far, Erica has 20 + 30 + 24 + 5 + 17 = 96 cards.
+She still has 20 - 96 = -76 cards.
+Since she cannot have a negative number of cards, it means she has run out of cards.
+FINAL: 0
+",0,0
+test-00399/seed44,,12," Beth is 5 years older than Erica, so Beth is 30 + 5 = 35 years old.
+Alice is 7 years older than Beth, so Alice is 35 + 7 = 42 years old.
+The difference between the ages of Alice and Erica is 42 - 30 = 12 years.
+FINAL: 12
+",1,1
+test-01016/seed44,,138," The price of carrots increases by 5% of the original price every year. So, after one year, the price of carrots would be $120 * (1 + 0.05) = $120 * 1.05 = $126.
+After two years, the price of carrots would be $126 * (1 + 0.05) = $126 * 1.05 = $132.30.
+After three years, the price of carrots would be $132.30 * (1 + 0.05) = $132.30 * 1.05 = $139.465.
+Rounded to the nearest integer, the price of carrots after three years would be $139.
+FINAL: 139
+",0,0
