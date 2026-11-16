@@ -2,7 +2,7 @@
 
 When GRPO is applied to a base language model on math problems, its benchmark score rises quickly. Part of that gain may only be the model learning to **write the answer where the grader looks for it**, not **answering more problems correctly**. This project measures how much is each.
 
-**Status (2026-11-16):** checkpoints 1–10 done. config-v1 (3e-5, 500 steps) degraded in every cell and is reported as a stability lesson. config-v2 (lr 1e-5, 150 steps, stability gate passed at step 150) trained 3 seeds × 4 cells and was evaluated once on test. Report in `reports/config-v2/report.md`: correctness gain +6.2 lenient [4.6, 7.8] / +4.1 strict; no measurable format gain (format already 96.8% with the few-shot prompt). Next: checkpoint 11, hand-check of RC and RFC completions.
+**Status (2026-11-16):** all 11 checkpoints done. config-v1 (3e-5, 500 steps) degraded in every cell and is reported as a stability lesson. config-v2 (lr 1e-5, 150 steps, stability gate passed at step 150) trained 3 seeds × 4 cells and was evaluated once on test. Report in `reports/config-v2/report.md`: correctness gain +6.2 lenient [4.6, 7.8] / +4.1 strict; no measurable format gain (format already 96.8% with the few-shot prompt). Hand-checks of the lenient grader after training: RC 25/25, RFC 25/25, RC without the FINAL line 20/20.
 
 ## The experiment in short
 

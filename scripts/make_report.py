@@ -11,6 +11,7 @@ on unchanged outputs gives the same files.
 import json
 from pathlib import Path
 
+from grpo_gsm8k.audit import grader_agreement, read_audit_sheet
 from grpo_gsm8k.config import load_config
 from grpo_gsm8k.paths import REPO_ROOT
 from grpo_gsm8k.queue import run_dir
@@ -48,6 +49,24 @@ def config_v1_test_table() -> str:
         rows.append(f"| {name} | {pct(metrics['lenient_accuracy'])} | {pct(metrics['strict_accuracy'])} | "
                     f"{pct(metrics['format_rate'])} | {pct(metrics['truncation_rate'])} |")
     return "\n".join(["| Model | Lenient % | Strict % | Format % | Truncated % |", "|---|---|---|---|---|", *rows])
+
+
+HAND_CHECKS = (
+    ("B0, few-shot, before training (validation)", "preflight_B0_fewshot.csv"),
+    ("RC, step 150, uniform (test)", "posttrain_RC.csv"),
+    ("RFC, step 150, uniform (test)", "posttrain_RFC.csv"),
+    ("RC without FINAL line, targeted slice (test)", "posttrain_RC_no_format.csv"),
+)
+
+
+def hand_check_table() -> str:
+    """Agreement of a blind human judgement with the lenient grader, one row per sheet."""
+    rows = []
+    for label, file in HAND_CHECKS:
+        sheet = read_audit_sheet(REPO_ROOT / "audits" / file)
+        rate, disagreements = grader_agreement(sheet)
+        rows.append(f"| {label} | {len(sheet) - len(disagreements)} / {len(sheet)} | {100 * rate:.0f}% |")
+    return "\n".join(["| Sample | Agree | Rate |", "|---|---|---|", *rows])
 
 
 def main() -> None:
@@ -125,6 +144,14 @@ before the change; config-v2 used none of these numbers.
 {config_v1_test_table()}
 
 ![config-v1 drift](config_v1_drift.png)
+
+## Hand-checks of the lenient grader
+
+A person judged each completion blind (the grader's decision hidden) and the result was compared with the
+lenient grader. The targeted slice is picked from the hard cases on purpose, so it is reported apart from
+the uniform samples. Samples this small bound the error rate only loosely; they cannot rule out rare misreads.
+
+{hand_check_table()}
 
 ## Example problem
 

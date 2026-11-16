@@ -82,6 +82,19 @@ before the change; config-v2 used none of these numbers.
 
 ![config-v1 drift](config_v1_drift.png)
 
+## Hand-checks of the lenient grader
+
+A person judged each completion blind (the grader's decision hidden) and the result was compared with the
+lenient grader. The targeted slice is picked from the hard cases on purpose, so it is reported apart from
+the uniform samples. Samples this small bound the error rate only loosely; they cannot rule out rare misreads.
+
+| Sample | Agree | Rate |
+|---|---|---|
+| B0, few-shot, before training (validation) | 50 / 50 | 100% |
+| RC, step 150, uniform (test) | 25 / 25 | 100% |
+| RFC, step 150, uniform (test) | 25 / 25 | 100% |
+| RC without FINAL line, targeted slice (test) | 20 / 20 | 100% |
+
 ## Example problem
 
 Chosen by a fixed rule: the first test problem that B0 gets strict-wrong and RFC (seed 42)
