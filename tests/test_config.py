@@ -14,13 +14,16 @@ def test_base_config_matches_methodology():
     assert (config.lora.rank, config.lora.alpha, config.lora.dropout) == (16, 32, 0.0)
     training = config.training
     assert training.problems_per_step * training.group_size == 16
-    assert training.steps * training.problems_per_step == config.data.train_size  # one pass
+    # config-v2 (METHODOLOGY §13, 2026-11-15): 150 steps, 300 of the 1,000 training problems
+    assert training.steps * training.problems_per_step <= config.data.train_size
+    assert training.steps % training.checkpoint_every == 0
     assert (training.temperature, training.top_p, training.max_new_tokens) == (0.8, 0.95, 512)
     assert training.seeds == (42, 43, 44)
-    # set by the LR pilot (checkpoint 8) and frozen with the tag config-v1
+    # config-v2: 1e-5, a rate the LR pilot found stable (config-v1 used the pilot's choice, 3e-5)
     pilot = json.loads((MANIFEST_DIR / "lr_pilot.json").read_text())
-    assert training.learning_rate == pilot["chosen_learning_rate"] == 3e-5
-    assert training.learning_rate in config.lr_pilot.learning_rates
+    stable = {verdict["learning_rate"] for verdict in pilot["verdicts"] if not verdict["collapsed"]}
+    assert training.learning_rate == 1e-5 and training.learning_rate in stable
+    assert config.config_tag == "config-v2"
 
 
 def test_analysis_config_matches_methodology():

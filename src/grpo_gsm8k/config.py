@@ -65,6 +65,14 @@ class LrPilotConfig:
 
 
 @dataclass(frozen=True)
+class StabilityGateConfig:
+    check_step: int
+    fallback_step: int
+    max_truncation_rise: float
+    max_r0_lenient_change: float
+
+
+@dataclass(frozen=True)
 class PreflightConfig:
     p0_threshold: float
     fewshot_override: bool | None  # None = follow the go / no-go rule
@@ -88,11 +96,13 @@ class AnalysisConfig:
 
 @dataclass(frozen=True)
 class ExperimentConfig:
+    config_tag: str  # run outputs go to outputs/<config_tag>/
     model: ModelConfig
     data: DataConfig
     lora: LoraConfig
     training: TrainingConfig
     lr_pilot: LrPilotConfig
+    stability_gate: StabilityGateConfig
     preflight: PreflightConfig
     evaluation: EvaluationConfig
     analysis: AnalysisConfig
@@ -103,11 +113,13 @@ def load_config(path: Path = BASE_CONFIG_PATH) -> ExperimentConfig:
     training = dict(raw["training"])
     training["seeds"] = tuple(training["seeds"])
     return ExperimentConfig(
+        config_tag=raw["config_tag"],
         model=ModelConfig(**raw["model"]),
         data=DataConfig(**raw["data"]),
         lora=LoraConfig(**raw["lora"]),
         training=TrainingConfig(**training),
         lr_pilot=LrPilotConfig(**{**raw["lr_pilot"], "learning_rates": tuple(raw["lr_pilot"]["learning_rates"])}),
+        stability_gate=StabilityGateConfig(**raw["stability_gate"]),
         preflight=PreflightConfig(**raw["preflight"]),
         evaluation=EvaluationConfig(**raw["evaluation"]),
         analysis=AnalysisConfig(**raw["analysis"]),
